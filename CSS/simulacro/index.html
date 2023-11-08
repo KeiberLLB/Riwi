@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>HOTEL Portobelo</title>
+</head>
+
+<body>
+    <header class="header">
+      <div class="cont-logo">
+        <img src="./img/logoPortobelo.png" alt="Hotel Portobelo">
+      </div>
+			<div class="nav-pc">
+				<div class="checkbox">
+					<i class='bx bx-menu'></i>
+					<input type="checkbox" id="checkbox">
+				</div>
+				<nav class="nav-bar">
+					<label for="#"><i class='bx bxs-dish'></i><i class='bx bxs-down-arrow'></i></label>
+						<div class="option-hotel">
+							<select name="tipo" id="tipo">
+								<option value="">Tipo de habitacion</option>
+								<option value="">Sencilla</option>
+								<option value="">Doble</option>
+							</select>
+							<select name="estilo" id="estilo">
+								<option value="">Estilo de habitacion</option>
+								<option value="">Premium</option>
+								<option value="">Moderno</option>
+								<option value="">Luxury</option>
+							</select>
+							<div class="check">
+								<label for="">Check-in <i class='bx bx-calendar-check' ></i></label>
+								<div>
+							<input type="date" name="check-in" id="check-in" placeholder="check-in" required>
+								</div>
+							
+							</div>
+							<div class="check">
+								<label for="">Check-out <i class='bx bx-calendar-x' ></i></label>
+								<div class="despliegue">
+							<input type="date" name="check-out" id="check-out"
+							required>
+								</div>
+							</div>
+						</div>
+					<i class='bx bxs-user' ></i>
+					<div class="sesion">
+
+						<div class="sesion-dates">
+							<label for="">Usuario</label>
+							<input type="text" name="usuario" id="usuario" required>
+							<label for="">Contraseña</label>
+							<input type="password" name="password" id="password" required>
+							<button type="submit">Iniciar sesión</button>
+						</div>
+					</div>
+					</div>
+				</nav>
+			</div>
+
+
+
+    </header>
+
+
+</body>
+
+</html>
