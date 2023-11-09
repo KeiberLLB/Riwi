@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+:root {
+  --primary: #1b2026;
+  --secondary: #232a34;
+  --success: #fe2a31;
+  --light: #d2d3d7;
+  --blue: #3a47f7;
+}
+* {
+  /* outline: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+
+body {
+  min-height: 100vh;
+  color: var(--light);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--primary);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 95%;
+  gap: 10px;
+}
+
+.games-home {
+  width: 60vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: column;
+  background: var(--primary);
+  gap: 10px;
+}
+
+.games-home .g-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    justify-content: column;
+    align-items: column;
+    background: var(--secondary);
+    border-radius: 5px;
+  }
+
+
+  
+  
+
+.games-home .cant div {
+      position: absolute;
+      background: var(--success);
+      width: 80px;
+      height: 60px;
+      border-radius: 5px;
+      font-size: 30px;
+      color: var(--light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      margin: 15px;
+    }
+
+.games-home .sub-name {
+      margin-top: 100px;  
+      background: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 10px;
+      font-size: 60px;
+      font-weight: bold;
+      & img {
+        width: 150px;
+        background: var(--secondary);
+        position: relative;
+      ;
+      }
+    }
+
+
+.games-home .sub-name .r {
+  color: var(--success);
+  margin-left: 10px;
+}
+.games-home .sub-name p{
+  background: var(--secondary);
+}
+
+.games-home .text  {
+  background: var(--secondary);
+  margin-left: 10px;
+  color: var(--light);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.games-home .bonus {
+  height: 60px;
+  background: var(--primary);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  }
+  
+.games-home .bonus .s-bonus {
+  width: auto;
+  align-items: center;
+  
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  gap: 10px;
+}
+.games-home .bonus .s-bonus .img{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 50px;
+  margin-left: 10px;  
+}
+.games-home .bonus .s-bonus .img2 {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.games-home .bonus .s-bonus .img img{
+  width: 50px;
+  
+}
+.games-home .bonus .s-bonus .img2 img {
+  width: 40px;
+  
+}
+.games-home .bonus .s-bonus .tex{
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+.games-home .bonus .s-bonus .tex p {
+  background: var(--secondary);
+  border-radius: 10px;
+  font-size: 10px;
+  color: var(--light);
+  font-weight: bold;
+}
+
+.games-home .bonus .s-bonus .tex span{
+  background: var(--secondary);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+    
+
+      
+
