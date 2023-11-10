@@ -1,61 +1,11 @@
-.games-home .new-games .text {
-  background: var(--primary);
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.games-home .new-games .card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
-.games-home .new-games .card .card1 {
-  background-image: url(../img/RDR2_HeroSquare_1080x1080.jpg);
-  width: 100px;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}
-.games-home .new-games .card .card2 {
-  background-image: url(../img/64b03f4807b24.jpeg);
-  width: 100px;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}.games-home .new-games .card .card3 {
-  background-image: url(../img/csgo-tournaments-esports-betting.jpg);
-  width: 100px;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}.games-home .new-games .card .card4 {
-  background-image: url(../img/DorkUnit.jpg);
-  width: 100px;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}.games-home .new-games .card .card5 {
-  background-image: url(../img/v8JlD8KcQUtTqaLBmpFnj1ESRR5zMkLk.webp);
-  width: 100px;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-}
-
 .poins {
   background: var(--secondary);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60vh;
-  height: 25vh;
+  width: 100%;
+  height: 40vh;
   position: relative;
   margin-top: 20px;
   & .s-poins {
@@ -86,8 +36,9 @@
 
     }
     & img {
+      z-index: 3;
       position: absolute;
-      width: 80px;
+      width: 150px;
       right: 0px;
       bottom: -9px;
     }
@@ -101,8 +52,8 @@
       gap: 10px;
       
       & .c1, .c2 {
-        width: 110px;
-        height: 110px;
+        width: 200px;
+        height: 200px;
         background: var(--primary);
         border-radius: 5px;
         display: flex;
@@ -120,11 +71,11 @@
           border-radius: 5px;
           outline: 1px solid var(--light);
           & .t {
-            font-size: 10px;
+            font-size: 20px;
             font-weight: bold;
           }
           & p {
-            font-size: 10px;
+            font-size: 20px;
           }
         & .logo1, .logo2, .logo3 {
           position: absolute;
@@ -179,12 +130,10 @@
 }
 
 #c2 {
-  width: 130px;
-  height: 130px;
+  width: 250px;
+  height: 250px;
   background-image: linear-gradient(220deg, 
   var(--light) 0%, 
   var(--blue) 40%);
 
 }
-
-  

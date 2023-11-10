@@ -29,7 +29,6 @@
   }
   & .nav-bar {
     font-size: 20px;
-    font-weight: 800;
     display: flex;
     justify-content: flex-end;
     align-items: center;
