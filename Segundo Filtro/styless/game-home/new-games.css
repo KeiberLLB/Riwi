@@ -1,7 +1,8 @@
 .new-games{
-  
+  position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   & .text {
     font-size: 25px;
     font-weight: bold;
@@ -12,6 +13,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     & .card1 {
       background-image: url(../img/RDR2_HeroSquare_1080x1080.jpg);

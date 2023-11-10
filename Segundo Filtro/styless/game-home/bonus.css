@@ -1,10 +1,12 @@
 .bonus {
-  height: 80px;
+  height: max-content;
   background: var(--primary);
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 20px;
+  position: relative;
+  flex-wrap: wrap;
   & .s-bonus {
     width: 300px;
     height: 100px;
