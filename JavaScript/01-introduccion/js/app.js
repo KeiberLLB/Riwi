@@ -22,7 +22,7 @@ console.info("Informacion al usuario");
 
 // console.warn muestra un mensaje de advertencia 
 // cw
-console.warn("Esto es un menaje de advertencia")
+console.warn("Esto es un menaje de advertencia");
 
 // console.error muestra un mensaje de error
 // ce
@@ -46,3 +46,4 @@ console.groupEnd();
 // console.table nos permite visualizar listas en forma de tablas
 // clt
 console.table([{nombre: "Keiber", ciudad: "Medellin", edad: edad}]);
+
