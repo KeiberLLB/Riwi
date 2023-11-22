@@ -107,7 +107,7 @@ if (num1 >= 18) {
 
 // 15. Verifica si un número es un cuadrado perfecto.
 
-num1 = 36;
+num1 = 26;
 resultado = Math.sqrt(num1);
 let resultado2 = Math.round(resultado) * Math.round(resultado);
 if (resultado2 == num1) {
@@ -118,11 +118,8 @@ if (resultado2 == num1) {
 
 // 16. Determina si un número es un número de Fibonacci.
 
-let a=1;
-let b=a;
-let c=a+b;
-a=b;
-b=c;
-
-
-
+let a = 1;
+let b = a;
+let c = a + b;
+a = b;
+b = c;
