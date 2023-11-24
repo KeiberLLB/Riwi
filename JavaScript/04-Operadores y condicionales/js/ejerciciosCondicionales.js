@@ -107,7 +107,7 @@ if (num1 >= 18) {
 
 // 15. Verifica si un número es un cuadrado perfecto.
 
-num1 = 26;
+num1 = 100;
 resultado = Math.sqrt(num1);
 let resultado2 = Math.round(resultado) * Math.round(resultado);
 if (resultado2 == num1) {
@@ -123,3 +123,7 @@ let b = a;
 let c = a + b;
 a = b;
 b = c;
+
+console.log(Math.sqrt(num1));
+
+console.log(Number.isInteger(Math.sqrt(num1)));
