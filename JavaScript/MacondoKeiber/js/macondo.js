@@ -84,6 +84,27 @@ Reserva Confirmada con exito`);
 Concepto: Uso WiFi/hora`);
   alert(`Tu saldo actual es de $ ${saldo}`);
 }
+function traductor() {
+  do {
+    continuar = true;
+    const opcion = prompt(`*** Herramienta Comunicacion Macondo ***
+  1. Traductor.
+  2. Salir`);
+
+    switch (opcion) {
+      case "1":
+        let frase = prompt("Traducir: ");
+        alert(`Traduciendo ...`);
+        frase = frase.replace(/[aeou]/g, "i");
+        alert(frase);
+        break;
+
+      default:
+        continuar = false;
+        break;
+    }
+  } while (continuar);
+}
 let saldo = 2500000;
 let continuar = true;
 let diasVagaciones = 0;
@@ -153,25 +174,7 @@ WiFi();
 //caso 4
 alert(`¡Bienvenido a Macondo!`);
 
-do {
-  continuar = true;
-  const opcion = prompt(`*** Herramienta Comunicacion Macondo ***
-  1. Traductor.
-  2. Salir`);
-
-  switch (opcion) {
-    case "1":
-      let frase = prompt("Traducir: ");
-      alert(`Traduciendo ...`);
-      frase = frase.replace(/[aeou]/g, "i");
-      alert(frase);
-      break;
-
-    default:
-      continuar = false;
-      break;
-  }
-} while (continuar);
+traductor();
 
 //caso 5
 alert(`Llegaste al Hotel:`);
