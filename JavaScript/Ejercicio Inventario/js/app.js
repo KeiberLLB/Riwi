@@ -20,7 +20,6 @@ function main() {
     }
   } while (flag);
 }
-
 function agregarProducto() {
   nombre = prompt("Ingrese el nombre del producto");
   categoria = prompt("Ingrese la categoria del producto");
