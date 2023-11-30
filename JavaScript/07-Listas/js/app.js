@@ -82,13 +82,11 @@ const filtrados3 = coders.some((iterador) => iterador.nombre === "Keiber");
 console.log(filtrados3);
 
 //sort -- utiliza el algoritmo de ordenamientos burbuja el cual se basa en la recta numerica
-// formula para ordenar listas en base a un parametro
+// formula para ordenar listas en base a un parametro numerico
 const lisOrdenada = coders.sort((a, b) => a.id - b.id);
 console.log(lisOrdenada);
 // ordena de forma alfabetica respecto al nombre
-const lisOrdenada2 = coders.sort(
-  (a, b) => a.nombre.localeCompare - b.nombre.localeCompare
-);
+const lisOrdenada2 = coders.sort((a, b) => a.nombre.localeCompare(b.nombre));
 console.log(lisOrdenada2);
 
 //funciones
