@@ -9,6 +9,9 @@ function main() {
       case "2":
         eliminarProducto();
         break;
+      case "3":
+        modificarProducto();
+        break;
       case "6":
         mostrarReporte();
       case "7":
@@ -19,6 +22,37 @@ function main() {
         mostrarAlerta();
     }
   } while (flag);
+}
+function modificarProducto() {
+  mostrarReporte();
+  const nombreModificar = prompt("Ingresa el nombre del producto a Modificar");
+  if (
+    !listaDeProductos.some(
+      (producto) =>
+        producto.nombre.toLowerCase() == nombreModificar.toLowerCase()
+    )
+  ) {
+    mostrarAlerta(`No existen productos con el nombre ${nombreModificar}`);
+    return;
+  }
+  nombre = prompt(
+    "Ingrese el nuevo nombre del producto o si desea no modificar ingrese N"
+  );
+  categoria = prompt(
+    "Ingrese la nueva categoria del producto o si desea no modificar ingrese N"
+  );
+  cantidad = Number(
+    prompt(
+      "Ingrese la nueva cantidad del producto o si desea no modificar ingrese N"
+    )
+  );
+  precio = Number(
+    prompt(
+      "Ingrese el nuevo precio del producto o si desea no modificar ingrese N"
+    )
+  );
+  actualizarPrecioCantidad(precio);
+  actualizarPrecioCantidad(cantidad);
 }
 function agregarProducto() {
   nombre = prompt("Ingrese el nombre del producto");
@@ -64,6 +98,18 @@ function eliminarProducto() {
     `Los productos con el nombre ${nombreEliminar} fueron eliminados exitosamente`
   );
 }
+function actualizarPrecioCantidad(value) {
+  if (isNaN(value) && value.toLowerCase() != "n") {
+    mostrarAlerta(
+      "Debes ingresar un valor numerico o informar si no quieres modificarlo"
+    );
+    return;
+  }
+  const productoModificado = {
+    value: value,
+  };
+}
+
 function mostrarAlerta(mensaje = "Opcion no valida") {
   alert(mensaje);
 }
@@ -105,5 +151,4 @@ function mostrarReporte() {
   //   let producto = listaDeProductos[i];
   // }
 }
-
 main();
