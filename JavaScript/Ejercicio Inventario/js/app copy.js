@@ -14,7 +14,6 @@ function main() {
         break;
       case "6":
         mostrarReporte();
-        break;
       case "7":
         mostrarAlerta("Saliendo del sistema");
         flag = false;
@@ -24,56 +23,60 @@ function main() {
     }
   } while (flag);
 }
-
 function modificarProducto() {
-  const listaString = mostrarReporte(false);
-  const idModificar = prompt(
-    listaString +
-      `\n\nIngrese el identificador del producto que desea actualizar`
-  );
-  if (!listaDeProductos.some((producto) => producto.id == idModificar)) {
-    mostrarAlerta("No existen productos con este identificador");
+  mostrarReporte();
+  const nombreModificar = prompt("Ingresa el nombre del producto a Modificar");
+  if (
+    !listaDeProductos.some(
+      (producto) =>
+        producto.nombre.toLowerCase() == nombreModificar.toLowerCase()
+    )
+  ) {
+    mostrarAlerta(`No existen productos con el nombre ${nombreModificar}`);
     return;
   }
-  const objModificar = listaDeProductos.find(
-    (producto) => producto.id == idModificar
+  nombre = prompt(
+    "Ingrese el nuevo nombre del producto o si desea no modificar ingrese N"
   );
-  const datos = obtenerDatos(objModificar);
-  // Object.keys(objModificar).map((key) => (objModificar[key] = datos[key]));
-  // la linea anterior comentada es lo mismo de abajo pero en una linea
-  objModificar.nombre = datos.nombre;
-  objModificar.categoria = datos.categoria;
-  objModificar.cantidad = datos.cantidad;
-  objModificar.precio = datos.precio;
-  mostrarAlerta(`El producto se modifico correctamente`);
+  categoria = prompt(
+    "Ingrese la nueva categoria del producto o si desea no modificar ingrese N"
+  );
+  cantidad = Number(
+    prompt(
+      "Ingrese la nueva cantidad del producto o si desea no modificar ingrese N"
+    )
+  );
+  precio = Number(
+    prompt(
+      "Ingrese el nuevo precio del producto o si desea no modificar ingrese N"
+    )
+  );
+  actualizarPrecioCantidad(precio);
+  actualizarPrecioCantidad(cantidad);
 }
-function obtenerDatos(
-  obj = {
-    nombre: "",
-    categoria: "",
-    cantidad: "",
-    precio: "",
-  }
-) {
-  nombre = prompt("Ingrese el nombre del producto", obj.nombre);
-  categoria = prompt("Ingrese la categoria del producto", obj.categoria);
-  cantidad = Number(prompt("Ingrese la cantidad del producto", obj.cantidad));
-  precio = Number(prompt("Ingrese el precio del producto", obj.precio));
+function agregarProducto() {
+  nombre = prompt("Ingrese el nombre del producto");
+  categoria = prompt("Ingrese la categoria del producto");
+  cantidad = Number(prompt("Ingrese la cantidad del producto"));
+  precio = Number(prompt("Ingrese el precio del producto"));
 
   //Validacion de numeros
   if (isNaN(cantidad) || isNaN(precio)) {
     mostrarAlerta("Cantidad y precio deben ser numericos");
     return;
   }
-  return { nombre, categoria, cantidad, precio };
-}
-
-function agregarProducto() {
-  const objNuevo = obtenerDatos();
   const id = Date.now();
   // cuando la key es igual a la variable nueva que se quiere agregar se deja como esta abajo
-  const nuevoProducto = { id, ...objNuevo };
+  const nuevoProducto = {
+    id,
+    nombre,
+    categoria,
+    cantidad,
+    precio,
+  };
   listaDeProductos.unshift(nuevoProducto);
+
+  console.log(listaDeProductos);
 }
 function eliminarProducto() {
   mostrarReporte();
@@ -95,6 +98,17 @@ function eliminarProducto() {
     `Los productos con el nombre ${nombreEliminar} fueron eliminados exitosamente`
   );
 }
+function actualizarPrecioCantidad(value) {
+  if (isNaN(value) && value.toLowerCase() != "n") {
+    mostrarAlerta(
+      "Debes ingresar un valor numerico o informar si no quieres modificarlo"
+    );
+    return;
+  }
+  const productoModificado = {
+    value: value,
+  };
+}
 
 function mostrarAlerta(mensaje = "Opcion no valida") {
   alert(mensaje);
@@ -114,7 +128,7 @@ function menu() {
   `);
   return opcion;
 }
-function mostrarReporte(imprimir = true) {
+function mostrarReporte() {
   if (listaDeProductos.length < 0) {
     mostrarAlerta("No hay productos para reportar");
     return;
@@ -131,10 +145,10 @@ function mostrarReporte(imprimir = true) {
       index + 1
     }. id: ${id}, Nombre: ${nombre}, Categoria: ${categoria}, Cantidad: ${cantidad}, Precio: ${precio}\n`;
   });
-  if (imprimir) {
-    mostrarAlerta(listaString);
-    return;
-  }
-  return listaString;
+  mostrarAlerta(listaString);
+
+  // for (let i = 0; i < listaDeProductos.length; i++) {
+  //   let producto = listaDeProductos[i];
+  // }
 }
 main();
