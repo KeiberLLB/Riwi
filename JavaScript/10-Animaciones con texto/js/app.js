@@ -24,7 +24,6 @@ function maquinaEscribir() {
   }, 200); //Tiempo para escribir una letra
 }
 
-maquinaEscribir();
 function borrarPalabra() {
   let texto = textMaquina.textContent;
   const borrarString = setInterval(() => {
@@ -39,3 +38,15 @@ function borrarPalabra() {
     }
   }, 100); //Tiempo en borrar cada letra
 }
+
+maquinaEscribir();
+
+const textoAnimar = document.querySelector("#text");
+textoAnimar.innerHTML = textoAnimar.innerHTML
+  .split("")
+  .map(
+    (letra, i) => `
+<span style="transition-delay:${i * 40}ms;filter: hue-rotate(${i*30}deg); ">${letra}</span>
+`
+  )
+  .join("");
