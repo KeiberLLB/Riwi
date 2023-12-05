@@ -47,4 +47,6 @@ console.log(Number.parseFloat(numt));
 // 15
 console.log(Number.parseFloat(numt, 9));
 
-// 16
+// Lovence
+// 1
+
