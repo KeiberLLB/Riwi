@@ -17,21 +17,25 @@ const clases = {
   historiaDeMagia: "Profesor Ronald Sprout",
 };
 
-const casas = {
-  Gryffindor: {
+const casas = [
+  {
+    casa: "Gryffindor",
     cualidades: "Valor, Fuerza, Audacia",
     linaje: ["Mestizo", "Muggle", "Sangre Pura"],
   },
-  Hufflepuff: {
+  {
+    casa: "Hufflepuff",
     cualidades: "Justicia, Lealtad, Paciencia",
     linaje: ["Mestizo", "Muggle"],
   },
-  Ravenclaw: {
+  {
+    casa: "Revenclaw",
     cualidades: "Creatividad, Erudición, Inteligencia",
     linaje: ["Mestizo", "Muggle", "Sangre Pura"],
   },
-  Slytherin: {
+  {
+    casa: "Slytherin",
     cualidades: "Ambicion, Determinacion, Astucia",
     linaje: ["Sangre Pura"],
   },
-};
+];
