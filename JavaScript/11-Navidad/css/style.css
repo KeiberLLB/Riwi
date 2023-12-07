@@ -11,17 +11,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 100vw;
   min-height: 100vh;
   background: linear-gradient(#a2000a, #cf0000);
 }
 .contenedor {
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
 }
+.contenedor .img {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  z-index: 3;
+  display: flex;
+}
 
-.contenedor::before {
+#imgA {
+  animation: animacionArbol 10s linear infinite;
+}
+/* .contenedor::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -29,7 +40,11 @@ body {
   width: 100%;
   height: 200px;
   z-index: 1;
-}
+  white-space: nowrap;
+  display: inline-block;
+  animation: animacionArbol 10s linear infinite;
+} */
+
 .contenedor .circulo {
   position: absolute;
   top: 10%;
@@ -91,13 +106,29 @@ body {
   z-index: 4;
   text-shadow: 2px 2px 2px #a2000a;
 }
+@keyframes animacionArbol2 {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}
+@keyframes animacionArbol {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
 
 @keyframes animacionNieve {
   0% {
-    transform: translateY(-10vh);
+    transform: translate(10vh, -10vw);
   }
   100% {
-    transform: translateY(110vh);
+    transform: translate(-110vh, 110vw);
   }
 }
 

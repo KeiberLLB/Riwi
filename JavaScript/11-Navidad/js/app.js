@@ -18,3 +18,17 @@ function random(inicio, final) {
 }
 generarNieve();
 generarNieve2();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const imagen = document.querySelector("img");
+
+  // Escucha el evento de finalización de la animación
+  imagen.addEventListener("animationiteration", function () {
+    reiniciarAnimacion();
+  });
+
+  // Función para reiniciar la animación
+  function reiniciarAnimacion() {
+    imagen.style.transform = "translateX(100%)";
+  }
+});
