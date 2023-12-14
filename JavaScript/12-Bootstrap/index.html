@@ -87,8 +87,20 @@
       <div class="row">
         <div class="col-12 my-4">
           <div class="container-fluid d-flex justify-content-end">
+            <!-- este es el boton para abrir el drawer de editar -->
+            <button
+              class="btn btn-dark opacity-0"
+              id="btnOpenDrawerEdit"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            ></button>
+            <!-- este es el boton para abrir el drawer de agregar -->
             <button
               class="btn btn-dark"
+              id="btnOpenDrawerInsert"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -108,7 +120,8 @@
                   class="offcanvas-title text-white"
                   id="offcanvasNavbarLabel"
                 >
-                  <i class="bx bx-cart-download"></i> Nuevo Producto
+                  <i class="bx bx-cart-download"></i>
+                  Nuevo Producto
                 </h5>
                 <button
                   type="button"

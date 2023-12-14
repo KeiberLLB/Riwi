@@ -1,6 +1,8 @@
 // selectores
 const tbody = document.querySelector("#tbody");
 const alerta = document.querySelector("#alerta");
+const tituloDrawer = document.querySelector("#offcanvasNavbarLabel");
+const btnPrincipalAgregar = document.querySelector("#btnOpenDrawerInsert");
 
 //selectores de inputs (entradas)
 const nombreProducto = document.querySelector("#nombre_producto");
@@ -8,10 +10,15 @@ const cantidadProducto = document.querySelector("#cantidad_producto");
 const precioProducto = document.querySelector("#precio_producto");
 const imagenProducto = document.querySelector("#imagen_producto");
 const categoriaProducto = document.querySelector("#categoria_producto");
-const eraserInput = document.querySelectorAll(".form-control");
+
+let productCache;
 //Botones
 const btnAgregar = document.querySelector("#btn_agregar");
-
+btnPrincipalAgregar.addEventListener("click", function (event) {
+  tituloDrawer.innerHTML = "<i class='bx bx-cart-download'></i>Nuevo Producto";
+  btnAgregar.textContent = "Agregar";
+  document.querySelector("#form_productos").reset();
+});
 //Eventos
 //cuando el usuario haga click dentro del boton btnAgregar se ejecutara una funcion
 btnAgregar.addEventListener("click", function (event) {
@@ -28,11 +35,37 @@ tbody.addEventListener("click", (event) => {
     const id = event.target.getAttribute("data-id");
     if (id) eliminarProducto(id);
     mostrarProductos();
+    return;
+  }
+  //si la etiqueta contiene la clase edit-product queire decir que estamos editando
+  if (event.target.classList.contains("edit-product")) {
+    //obtener el id del producto
+    const id = event.target.getAttribute("data-id");
+    if (id) cargarInformacion(id);
   }
 });
 function eliminarProducto(id) {
   //filtro todos los productos
   listaProductos = listaProductos.filter((producto) => producto.id != id);
+}
+
+// esta informacion se encarga de mostrar los valores en el drawer
+function cargarInformacion(id) {
+  //busco el producto que contenga ese id
+  productCache = listaProductos.find((producto) => producto.id == id);
+  //asignar el valor a cada input
+  nombreProducto.value = productCache.nombre;
+  precioProducto.value = productCache.precio;
+  cantidadProducto.value = productCache.cantidad;
+  categoriaProducto.value = productCache.categoria;
+  imagenProducto.value = productCache.imagen;
+  //selecciono el boton de editar desde el HTML
+  const drawer = document.querySelector("#btnOpenDrawerEdit");
+
+  drawer.click();
+  //para agregar sea desde div e imagenes
+  tituloDrawer.innerHTML = "<i class='bx bx-edit-alt'></i> Actualizar Producto";
+  btnAgregar.textContent = "Actualizar Producto";
 }
 
 //esta funcion se encarga de agregar y modificar un producto
@@ -52,19 +85,30 @@ function agregarProducto() {
     alerta.classList.remove("d-none");
     return;
   }
+  if (!productCache) {
+    const nuevoProducto = {
+      nombre: nombreProducto.value,
+      cantidad: cantidadProducto.value,
+      precio: precioProducto.value,
+      imagen: imagenProducto.value,
+      categoria: categoriaProducto.value,
+      id: Date.now(),
+    };
+    listaProductos.push(nuevoProducto);
+    alerta.textContent = `Se agrego correctamente ${nuevoProducto.nombre}`;
+  } else {
+    productCache.nombre = nombreProducto.value;
+    productCache.precio = precioProducto.value;
+    productCache.cantidad = cantidadProducto.value;
+    productCache.categoria = categoriaProducto.value;
+    productCache.imagen = imagenProducto.value;
 
-  const nuevoProducto = {
-    nombre: nombreProducto.value,
-    cantidad: cantidadProducto.value,
-    precio: precioProducto.value,
-    imagen: imagenProducto.value,
-    categoria: categoriaProducto.value,
-    id: Date.now(),
-  };
-  listaProductos.push(nuevoProducto);
+    productCache = undefined;
+
+    alerta.textContent = "Se actualizó correctamente el producto";
+  }
   //mostrar alerta de exito
   alerta.classList = "alert alert-success";
-  alerta.textContent = `Se agrego correctamente ${nuevoProducto.nombre}`;
   //escondo la alerta despues de 3 segundos
   setTimeout(() => {
     alerta.classList.add("d-none");
