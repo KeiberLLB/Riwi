@@ -93,31 +93,47 @@ body {
     }
     & .x {
       & i:hover {
-        background-color: var(--light);
         color: black;
         transform: scale(1.4);
       }
     }
     & .i {
       & i:hover {
-        background-color: var(--light);
         color: magenta;
         transform: scale(1.4);
       }
     }
     & .y {
       & i:hover {
-        background-color: var(--light);
         color: red;
         transform: scale(1.4);
       }
     }
     & .l {
       & i:hover {
-        background-color: var(--light);
         color: blue;
         transform: scale(1.4);
       }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  & a {
+    text-decoration: none;
+    & i {
+      width: 35px;
+      height: 35px;
+      font-size: 30px;
+      border-radius: 100%;
+      transition: 0.5s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
