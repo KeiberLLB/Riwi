@@ -18,28 +18,27 @@ function agregarProducto(id, card) {
   }
   mostrarProductos();
 }
-
 function mostrarProductos() {
   tbody.innerHTML = "";
   listaProductos.forEach((producto) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `<td>
-        <img 
-        src="${producto.imagen}" 
+    <img 
+    src="${producto.imagen}" 
         alt="img producto"  
         height="50px"
         />
-      </td>
+        </td>
       <td>${producto.nombre}</td>
       <td>${producto.precio}</td>
       <td>${producto.cantidad}</td>
       <td>
-        <button class="borrar-producto" data-id="${producto.id}">Eliminar</button>
+      <button class="borrar-producto" data-id="${producto.id}">Eliminar</button>
       </td>`;
     tbody.appendChild(tr);
-    let total = 0;
-    total += Number(producto.precio.slice(1) * producto.cantidad);
-    tr.innerHTML += `<tr>${total}</tr>`;
+    //let total = 0;
+    //total += Number(producto.precio.slice(1) * producto.cantidad);
+    //tr.innerHTML += `<tr>${total}</tr>`;
   });
 }
 
@@ -56,3 +55,18 @@ function eliminarProducto(id) {
 // !listaProductos.some(producto.id)
 //   ? listaProductos.push(producto)
 //   : listaProductos.find(producto.id).cantidad++;
+
+function sumaTotal() {
+  carrito.innerHTML = "";
+
+  listaProductos.forEach((producto) => {
+    const tr = document.createElement("tr");
+    let total = 0;
+    total += Number(producto.precio.slice(1) * producto.cantidad);
+    tr.innerHTML = `<td>
+      <td colspan="3">Total</td>
+      <td colspan="2">$ ${total}</td>
+    </td>`;
+    carrito.appendChild(tr);
+  });
+}
