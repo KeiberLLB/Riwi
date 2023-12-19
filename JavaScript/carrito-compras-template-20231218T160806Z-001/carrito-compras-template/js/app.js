@@ -1,9 +1,8 @@
 let listaProductos = [];
-let total;
 
 const tbody = document.querySelector("#carrito tbody");
 const vaciarCarrito = document.querySelector("#vaciar-carrito");
-const carrito = document.querySelector("#carrito tfoot");
+const totalC = document.querySelector("#carrito tfoot");
 
 const contenedorProductos = document.querySelector("#lista-productos");
 
@@ -11,7 +10,7 @@ vaciarCarrito.addEventListener("click", function (event) {
   event.preventDefault(); //evita que se recargue la pagina al hacer click en el boton
   listaProductos = [];
   tbody.innerHTML = "";
-  sumaTotal();
+  totalC.innerHTML = "";
 });
 
 tbody.addEventListener("click", (event) => {
