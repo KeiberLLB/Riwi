@@ -1,6 +1,9 @@
 function main() {
   const cardC = document.querySelector("#lista-productos .card_container");
-  cardProduct.forEach((product) => {
+  cardProduct.forEach((product) => { 
+    const listaDeCalificacion = Array.from({ length: 5 }).map((e, index) => {
+      return`<i class='bx bxs-star star'></i>`
+    })
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `<img
@@ -10,8 +13,8 @@ function main() {
             <div class="info-card">
               <h4>${product.nombre}</h4>
               <p>${product.marca}</p>
-              <img src="img/estrellas.png" />
-
+              <span>${listaDeCalificacion.join("")}</span>
+        
               ${
                 !product.descuento
                   ? `<p class="psd">$${product.precio}</p>`

@@ -164,8 +164,6 @@ tfoot tr td {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
-  outline: 1px solid red;
 }
 .card {
   text-align: center;
@@ -206,4 +204,9 @@ tfoot tr td {
   display: block;
   margin-bottom: 10px;
   text-decoration: none;
+}
+
+.star {
+  color: rgb(233, 233, 43);
+  font-size: 20px;
 }

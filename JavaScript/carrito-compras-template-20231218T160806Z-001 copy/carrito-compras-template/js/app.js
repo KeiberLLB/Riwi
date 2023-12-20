@@ -1,7 +1,5 @@
 main();
 
-
-
 let listaProductos = [];
 
 const tbody = document.querySelector("#carrito tbody");
