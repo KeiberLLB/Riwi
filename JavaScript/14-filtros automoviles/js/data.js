@@ -5,7 +5,7 @@ const autos = [
     year: 2006,
     precio: 400000,
     puertas: 2,
-    color: "Red",
+    color: "Rojo",
     transmision: "manual",
     imagen:
       "https://www.ilusso.com/imagetag/2523/main/l/Used-2006-Ford-GT-1699386486.jpg",
@@ -16,7 +16,7 @@ const autos = [
     year: 2022,
     precio: 103000,
     puertas: 2,
-    color: "Gray",
+    color: "Blanco",
     transmision: "automatico",
     imagen:
       "https://www.ilusso.com/imagetag/2122/main/l/Used-2022-Chevrolet-Corvette-Stingray-1691784221.jpg",
@@ -27,7 +27,7 @@ const autos = [
     year: 2003,
     precio: 3800000,
     puertas: 2,
-    color: "Red",
+    color: "Rojo",
     transmision: "automatico",
     imagen:
       "https://cdn.motor1.com/images/mgl/KLgJq/s1/2003-ferrari-enzo-sells-for-3.8-million.webp",
@@ -38,7 +38,7 @@ const autos = [
     year: 1998,
     precio: 78000,
     puertas: 2,
-    color: "blue",
+    color: "Azul",
     transmision: "Manual",
     imagen:
       "https://www.motorbiscuit.com/wp-content/uploads/2023/05/1999-skyline-R34.webp",
@@ -49,7 +49,7 @@ const autos = [
     year: 2017,
     precio: 55000,
     puertas: 2,
-    color: "blue",
+    color: "Azul",
     transmision: "automatico",
     imagen:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/SRT_Viper_GTS_blue-2.jpg/1920px-SRT_Viper_GTS_blue-2.jpg",
