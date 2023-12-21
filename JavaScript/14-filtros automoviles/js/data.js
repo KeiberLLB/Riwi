@@ -1,5 +1,60 @@
 const autos = [
   {
+    marca: "Ford",
+    modelo: "GT",
+    year: 2006,
+    precio: 400000,
+    puertas: 2,
+    color: "Red",
+    transmision: "manual",
+    imagen:
+      "https://www.ilusso.com/imagetag/2523/main/l/Used-2006-Ford-GT-1699386486.jpg",
+  },
+  {
+    marca: "Chevrolet",
+    modelo: "Corvette Stingray",
+    year: 2022,
+    precio: 103000,
+    puertas: 2,
+    color: "Gray",
+    transmision: "automatico",
+    imagen:
+      "https://www.ilusso.com/imagetag/2122/main/l/Used-2022-Chevrolet-Corvette-Stingray-1691784221.jpg",
+  },
+  {
+    marca: "Ferrari",
+    modelo: "Enzo",
+    year: 2003,
+    precio: 3800000,
+    puertas: 2,
+    color: "Red",
+    transmision: "automatico",
+    imagen:
+      "https://cdn.motor1.com/images/mgl/KLgJq/s1/2003-ferrari-enzo-sells-for-3.8-million.webp",
+  },
+  {
+    marca: "Nissan",
+    modelo: "R34 Skyline",
+    year: 1998,
+    precio: 78000,
+    puertas: 2,
+    color: "blue",
+    transmision: "Manual",
+    imagen:
+      "https://www.motorbiscuit.com/wp-content/uploads/2023/05/1999-skyline-R34.webp",
+  },
+  {
+    marca: "Dodge",
+    modelo: "Viper SRT 10",
+    year: 2017,
+    precio: 55000,
+    puertas: 2,
+    color: "blue",
+    transmision: "automatico",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/SRT_Viper_GTS_blue-2.jpg/1920px-SRT_Viper_GTS_blue-2.jpg",
+  },
+  {
     marca: "BMW",
     modelo: "Serie 3",
     year: 2020,
