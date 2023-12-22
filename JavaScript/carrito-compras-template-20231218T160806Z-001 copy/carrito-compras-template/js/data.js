@@ -52,7 +52,7 @@ const cardProduct = [
     precioD: 200,
     descuento: false,
     id: 5,
-    calificacion: 5,
+    calificacion: 4,
   },
   {
     imagen:"https://static.zara.net/photos///2023/I/0/2/p/5520/340/707/2/w/294/5520340707_6_1_1.jpg?ts=1690811174619"

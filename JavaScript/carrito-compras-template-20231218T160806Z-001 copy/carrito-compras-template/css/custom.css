@@ -208,5 +208,9 @@ tfoot tr td {
 
 .star {
   color: rgb(233, 233, 43);
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.star-gray {
+  color: rgb(167, 166, 166);
 }

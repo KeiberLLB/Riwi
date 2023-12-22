@@ -1,9 +1,16 @@
 function main() {
   const cardC = document.querySelector("#lista-productos .card_container");
-  cardProduct.forEach((product) => { 
+  cardC.innerHTML = "";
+  cardProduct.forEach((product) => {
+    // if (product.descuento==true){}
     const listaDeCalificacion = Array.from({ length: 5 }).map((e, index) => {
-      return`<i class='bx bxs-star star'></i>`
-    })
+      return `<i class='bx bxs-star ${
+        product.calificacion >= index + 1 ? "star" : "star-gray"
+      }'></i>`;
+    });
+    // !listaProductos.some(producto.id)
+    //   ? listaProductos.push(producto)
+    //   : listaProductos.find(producto.id).cantidad++;
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `<img
@@ -20,7 +27,6 @@ function main() {
                   ? `<p class="psd">$${product.precio}</p>`
                   : `<p class="precio">$${product.precio}<span class="u-pull-right">$${product.precioD}</span></p>`
               }
-             
               <a
                 href="#"
                 class="u-full-width button input agregar-carrito"
@@ -29,7 +35,8 @@ function main() {
               >
             </div>`;
     cardC.appendChild(card);
-  });
+  
+    });
 }
 
 function agregarProducto(id, card) {
@@ -45,9 +52,6 @@ function agregarProducto(id, card) {
     cantidad: 1,
     descuento: p.descuento,
   };
-  // !listaProductos.some(producto.id)
-  //   ? listaProductos.push(producto)
-  //   : listaProductos.find(producto.id).cantidad++;
 
   if (!listaProductos.some((item) => item.id == id)) {
     listaProductos.push(producto);
