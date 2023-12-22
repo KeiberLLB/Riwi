@@ -20,10 +20,6 @@ const datosBusqueda = {
   color: "",
 };
 
-marca.addEventListener("input", (event) => {
-  datosBusqueda.marca = event.target.value;
-  filtrarAutos();
-});
 document.addEventListener("DOMContentLoaded", function () {
   mostrarAutos(autos);
   //llenar el select de años
@@ -38,4 +34,38 @@ document.addEventListener("DOMContentLoaded", function () {
     option.innerText = i;
     year.appendChild(option);
   }
+});
+marca.addEventListener("input", (event) => {
+  datosBusqueda.marca = event.target.value;
+  filtrarAutos();
+});
+
+year.addEventListener("input", (event) => {
+  datosBusqueda.year = event.target.value;
+  filtrarAutos();
+});
+
+minimo.addEventListener("input", (event) => {
+  datosBusqueda.minimo = event.target.value;
+  filtrarAutos();
+});
+
+maximo.addEventListener("input", (event) => {
+  datosBusqueda.maximo = event.target.value;
+  filtrarAutos();
+});
+
+puertas.addEventListener("input", (event) => {
+  datosBusqueda.puertas = event.target.value;
+  filtrarAutos();
+});
+
+transmision.addEventListener("input", (event) => {
+  datosBusqueda.transmision = event.target.value;
+  filtrarAutos();
+});
+
+color.addEventListener("input", (event) => {
+  datosBusqueda.color = event.target.value;
+  filtrarAutos();
 });

@@ -35,8 +35,7 @@ function main() {
               >
             </div>`;
     cardC.appendChild(card);
-  
-    });
+  });
 }
 
 function agregarProducto(id, card) {

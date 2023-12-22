@@ -28,13 +28,63 @@ function limpiarHTML() {
 }
 
 function filtrarAutos() {
-  const resultado = autos.filter(filtrarPorMarca);
+  const resultado = autos
+    .filter(filtrarPorMarca)
+    .filter(filtrarPorYear)
+    .filter(filtrarMinimo)
+    .filter(filtrarMaximo)
+    .filter(filtrarPuertas)
+    .filter(filtrarTransmision)
+    .filter(filtrarColor);
+
   mostrarAutos(resultado);
 }
 
 function filtrarPorMarca(auto) {
   if (datosBusqueda.marca) {
     return datosBusqueda.marca === auto.marca;
+  }
+  return auto;
+}
+
+function filtrarPorYear(auto) {
+  if (datosBusqueda.year) {
+    return datosBusqueda.year == auto.year;
+  }
+  return auto;
+}
+
+function filtrarMinimo(auto) {
+  if (datosBusqueda.minimo) {
+    return Number(datosBusqueda.minimo) <= auto.precio;
+  }
+  return auto;
+}
+
+function filtrarMaximo(auto) {
+  if (datosBusqueda.maximo) {
+    return Number(datosBusqueda.maximo) >= auto.precio;
+  }
+  return auto;
+}
+
+function filtrarPuertas(auto) {
+  if (datosBusqueda.puertas) {
+    return datosBusqueda.puertas == auto.puertas;
+  }
+  return auto;
+}
+  
+function filtrarTransmision(auto) {
+  if (datosBusqueda.transmision) {
+    return datosBusqueda.transmision == auto.transmision;
+  }
+  return auto;
+}
+
+function filtrarColor(auto) {
+  if (datosBusqueda.color) {
+    return datosBusqueda.color == auto.color;
   }
   return auto;
 }

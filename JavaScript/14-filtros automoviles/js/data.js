@@ -104,7 +104,7 @@ const autos = [
     year: 2016,
     precio: 70000,
     puertas: 4,
-    color: "Rojo",
+    color: "Gris",
     transmision: "automatico",
     imagen:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/2020_BMW_530d_M_Sport_facelift.jpg/1200px-2020_BMW_530d_M_Sport_facelift.jpg",
@@ -126,7 +126,7 @@ const autos = [
     year: 2018,
     precio: 60000,
     puertas: 2,
-    color: "Rojo",
+    color: "Azul",
     transmision: "manual",
     imagen:
       "https://www.elcarrocolombiano.com/wp-content/uploads/2019/05/20190504-CHEVROLET-CAMARO-2020-AA.jpg",
@@ -137,7 +137,7 @@ const autos = [
     year: 2019,
     precio: 80000,
     puertas: 2,
-    color: "Rojo",
+    color: "Blanco",
     transmision: "manual",
     imagen:
       "https://www.elcarrocolombiano.com/wp-content/uploads/2019/06/20190628-FORD-MUSTANG-SHELBY-GT350-2019-COLOMBIA-PRECIO-CARACTERISTICAS-01.jpg",
