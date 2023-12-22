@@ -39,7 +39,7 @@ const autos = [
     precio: 78000,
     puertas: 2,
     color: "Azul",
-    transmision: "Manual",
+    transmision: "manual",
     imagen:
       "https://www.motorbiscuit.com/wp-content/uploads/2023/05/1999-skyline-R34.webp",
   },
