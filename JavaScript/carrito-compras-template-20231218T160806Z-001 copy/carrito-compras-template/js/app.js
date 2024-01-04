@@ -40,7 +40,9 @@ contenedorProductos.addEventListener("click", (event) => {
   }
 });
 
-pantalonesBoton.addEventListener("click", mostrarPantalones);
-camisasBoton.addEventListener("click", mostrarCamisas);
-descuantosBoton.addEventListener("click", mostrarDescuentos);
+pantalonesBoton.addEventListener("click", () =>
+  mostrar("categoria", "pantalon")
+);
+camisasBoton.addEventListener("click", () => mostrar("categoria", "camisa"));
+descuantosBoton.addEventListener("click", () => mostrar("descuento", true));
 allProducts.addEventListener("click", main);
