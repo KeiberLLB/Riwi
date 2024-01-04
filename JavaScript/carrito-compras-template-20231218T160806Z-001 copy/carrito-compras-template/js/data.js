@@ -9,6 +9,7 @@ const cardProduct = [
     descuento: false,
     id: 1,
     calificacion: 3,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -20,6 +21,7 @@ const cardProduct = [
     descuento: true,
     id: 2,
     calificacion: 5,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -31,6 +33,7 @@ const cardProduct = [
     descuento: true,
     id: 3,
     calificacion: 2,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -42,6 +45,7 @@ const cardProduct = [
     descuento: false,
     id: 4,
     calificacion: 5,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -53,6 +57,7 @@ const cardProduct = [
     descuento: false,
     id: 5,
     calificacion: 4,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -64,6 +69,7 @@ const cardProduct = [
     descuento: false,
     id: 6,
     calificacion: 5,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -75,6 +81,7 @@ const cardProduct = [
     descuento: true,
     id: 7,
     calificacion: 4,
+    categoria: "pantalon",
   },
   {
     imagen:
@@ -86,6 +93,7 @@ const cardProduct = [
     descuento: true,
     id: 8,
     calificacion: 4,
+    categoria: "camisa",
   },
   {
     imagen:
@@ -97,6 +105,7 @@ const cardProduct = [
     descuento: true,
     id: 9,
     calificacion: 4,
+    categoria: "camisa",
   },
   {
     imagen:
@@ -108,6 +117,7 @@ const cardProduct = [
     descuento: true,
     id: 10,
     calificacion: 5,
+    categoria: "camisa",
   },
   {
     imagen:
@@ -119,6 +129,7 @@ const cardProduct = [
     descuento: false,
     id: 11,
     calificacion: 5,
+    categoria: "camisa",
   },
   {
     imagen:
@@ -130,5 +141,6 @@ const cardProduct = [
     descuento: true,
     id: 12,
     calificacion: 2,
+    categoria: "camisa",
   },
 ];

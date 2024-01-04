@@ -8,6 +8,11 @@ const totalC = document.querySelector("#carrito tfoot");
 
 const contenedorProductos = document.querySelector("#lista-productos");
 
+const pantalonesBoton = document.querySelector(".pantalones");
+const camisasBoton = document.querySelector(".camisas");
+const descuantosBoton = document.querySelector(".descuentos");
+const allProducts = document.querySelector(".all-products");
+
 vaciarCarrito.addEventListener("click", function (event) {
   event.preventDefault(); //evita que se recargue la pagina al hacer click en el boton
   listaProductos = [];
@@ -34,3 +39,8 @@ contenedorProductos.addEventListener("click", (event) => {
     sumaTotal();
   }
 });
+
+pantalonesBoton.addEventListener("click", mostrarPantalones);
+camisasBoton.addEventListener("click", mostrarCamisas);
+descuantosBoton.addEventListener("click", mostrarDescuentos);
+allProducts.addEventListener("click", main);
