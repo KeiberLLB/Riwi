@@ -13,6 +13,8 @@ const camisasBoton = document.querySelector(".camisas");
 const descuantosBoton = document.querySelector(".descuentos");
 const allProducts = document.querySelector(".all-products");
 
+const cambiarTema = document.querySelector("#theme");
+
 vaciarCarrito.addEventListener("click", function (event) {
   event.preventDefault(); //evita que se recargue la pagina al hacer click en el boton
   listaProductos = [];
@@ -46,3 +48,7 @@ pantalonesBoton.addEventListener("click", () =>
 camisasBoton.addEventListener("click", () => mostrar("categoria", "camisa"));
 descuantosBoton.addEventListener("click", () => mostrar("descuento", true));
 allProducts.addEventListener("click", main);
+
+// cambiarTema.addEventListener("click", (event) => {
+//   boddy.classList.
+// } )

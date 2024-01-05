@@ -21,7 +21,6 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 30px 8%;
   align-items: center;
 }
 
