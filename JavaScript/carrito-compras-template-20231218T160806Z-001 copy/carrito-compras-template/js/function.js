@@ -58,6 +58,7 @@ function agregarProducto(id, card) {
     const product = listaProductos.find((item) => item.id == id);
     product.cantidad++;
   }
+
   mostrarProductos();
 }
 function mostrarProductos() {
@@ -80,6 +81,11 @@ function mostrarProductos() {
       </td>`;
     tbody.appendChild(tr);
   });
+
+  // let modLS = localStorage.getItem("lp");
+  // modLS = JSON.parse(modLS);
+  // modLS = listaProductos;
+  localStorage.setItem("lp", JSON.stringify(listaProductos));
 }
 
 function eliminarProducto(id) {

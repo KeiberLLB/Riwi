@@ -15,11 +15,23 @@ const allProducts = document.querySelector(".all-products");
 
 const cambiarTema = document.querySelector("#theme");
 
+document.addEventListener("DOMContentLoaded", () => {
+  let listaCache = localStorage.getItem("lp");
+  if (listaCache) {
+    listaProductos = JSON.parse(listaCache);
+    mostrarProductos();
+  }
+});
+
 vaciarCarrito.addEventListener("click", function (event) {
   event.preventDefault(); //evita que se recargue la pagina al hacer click en el boton
   listaProductos = [];
   tbody.innerHTML = "";
   totalC.innerHTML = "";
+  localStorage.removeItem("lp");
+  // localStorage.clear();
+  // el .clear borra todo
+  // mejor usar .removeItem y especificar que ls borrar
 });
 
 tbody.addEventListener("click", (event) => {
