@@ -1,20 +1,17 @@
-// Selectores
-const selectPiso = document.getElementById("select_floor");
-const canecas = document.querySelectorAll(".bowl");
-const btnSubmit = document.getElementById("btnSubmit");
-const vaciarC = document.getElementById("vaciar");
-const vaciarAll = document.getElementById("vaciarAll");
 // Eventos y Escuchadores de eventos
 btnSubmit.addEventListener("click", () => {
-  const cantidad = document.getElementById("cantidad").value;
   puntosEcologicos.forEach((punto) => {
     if (punto.piso == selectPiso.value) {
-      punto[tipoCanecaAgregar] += parseInt(cantidad);
+      punto[tipoCanecaAgregar] += parseInt(cantidad.value);
     }
   });
-  console.log(selectPiso.value);
-  waste(selectPiso.value);
+  waste();
+  alertEco();
   localStorage.setItem("ls", JSON.stringify(puntosEcologicos));
+  btnClose.click();
+  // btnClose.click(); es igual a document.getElementById("btnClose").click();
+  cantidad.value = "";
+  // para los input no funciona el .textContent
 });
 canecas.forEach((caneca) => {
   caneca.addEventListener("click", (event) => {
@@ -30,14 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (listaCache) {
     puntosEcologicos = JSON.parse(listaCache);
   }
-  waste(selectPiso.value);
+  alertEco();
+  waste();
 });
 
 selectPiso.addEventListener("input", () => {
-  waste(selectPiso.value);
+  alertEco();
+  waste();
 });
 
-vaciarC.addEventListener("click", () => limpiarPiso(selectPiso.value));
+vaciarC.addEventListener("click", () => {
+  limpiarPiso();
+  alertEco();
+});
 
 vaciarAll.addEventListener("click", () => {
   puntosEcologicos.forEach((i) => {
@@ -45,5 +47,7 @@ vaciarAll.addEventListener("click", () => {
     i.no_aprovechables = 0;
     i.organicos = 0;
     localStorage.setItem("ls", JSON.stringify(puntosEcologicos));
+    alertEco();
+    waste();
   });
 });

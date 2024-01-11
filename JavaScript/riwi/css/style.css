@@ -28,13 +28,16 @@ select {
   display: none;
 }
 
+#alerE {
+  text-align: center;
+  font-size: 20px;
+}
 /* Contenedores de basura  */
 
 .contenedor_principal {
   display: flex;
   flex-direction: column;
-  gap: 20px
-  ;
+  gap: 20px;
 }
 
 .container_rubbish {
