@@ -38,6 +38,7 @@ selectPiso.addEventListener("input", () => {
 });
 
 vaciarC.addEventListener("click", () => limpiarPiso(selectPiso.value));
+
 vaciarAll.addEventListener("click", () => {
   puntosEcologicos.forEach((i) => {
     i.aprovechables = 0;
