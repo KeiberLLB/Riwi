@@ -30,6 +30,12 @@ body {
 
 .card {
   width: 14rem;
+  min-height: 300px;
+  & .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .container-cites {

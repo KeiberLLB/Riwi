@@ -1,21 +1,40 @@
 pintarCartas();
 
 form.addEventListener("submit", (event) => {
-  
   event.preventDefault();
- 
   const formData = new FormData(form);
+  const pacienteNuevo = {};
 
-  const paciente = {};
-  
   for (const [key, value] of formData) {
-    if (value=="") return
-    paciente[key] = value;
+    if (value == "") return;
+
+    pacienteNuevo[key] = value;
   }
-  pacientes.push(paciente);
-  console.log(pacientes);
-  localStorage.setItem("ls", JSON.stringify(pacientes));
+
+  if (pacientes[indice]) {
+    editar(pacienteNuevo);
+  } else {
+    pacientes.push(pacienteNuevo);
+  }
+  // if (pacientes) {
+  //   pacientes.find((paciente) => {
+  //     if (
+  // paciente.userName == pacienteNuevo.userName &&
+  //   paciente.phoneNumber == pacienteNuevo.phoneNumber &&
+  //   paciente.petName == pacienteNuevo.petName;
+  //     ) {
+  //
+  //     } else {
+  //       pacientes.push(pacienteNuevo);
+  //       pintarCartas();
+  //       localStorage.setItem("ls", JSON.stringify(pacientes));
+  //       form.reset();
+  //     }
+  //   });
+  // }
+
   pintarCartas();
+  localStorage.setItem("ls", JSON.stringify(pacientes));
   form.reset();
 });
 
@@ -26,4 +45,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   pintarCartas();
 });
-  

@@ -30,40 +30,56 @@ function pintarCartas() {
                   </div>
                 </p>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-primary">Editar</button>
-                  <button class="btn btn-danger">Eliminar</button>
+                  <button onclick="asignar(${index});" class="btn btn-primary">Editar</button>
+                  <button onclick="eliminar(${index});" class="btn btn-danger">Eliminar</button>
                 </div>
               </div>`;
-    
-    const deleteButton = card.querySelector(".btn-danger");
-    const editButton = card.querySelector(".btn-primary");
-    editar(index,editButton);
-    eliminar(index,deleteButton);
+    //onclick("function()");
+    // googlear ...
     containerCites.appendChild(card);
   });
 }
 
-function eliminar(index,deleteButton) {
-  
-  deleteButton.addEventListener("click", () => {
-    //splice es un metodo de listas y strings, donde el primer valor es la posicion y el segundo el numero de elementos a borrar
-    pacientes.splice(index, 1);
-    localStorage.setItem("ls", JSON.stringify(pacientes));
-    pintarCartas();
+function eliminar(index) {
+  //splice es un metodo de listas y strings, donde el primer valor es la posicion y el segundo el numero de elementos a borrar
+  pacientes.splice(index, 1);
+  localStorage.setItem("ls", JSON.stringify(pacientes));
+  pintarCartas();
+}
+
+// function editar(index, editButton) {
+//   editButton.addEventListener("click", () => {
+//     const petname = document.getElementById("name_pet");
+//     const nameuser = document.getElementById("name_person");
+//     const phone = document.getElementById("phone_person");
+//     const date = document.getElementById("date_cite");
+//     const time = document.getElementById("time_cite");
+//     const descp = document.getElementById("description");
+//     const p = pacientes[index];
+//     console.log(p);
+
+//     p.forEach(() => {
+//       petname.value = i.value;
+//     });
+
+//     // // for (const [key, value] of inputs) {
+//     // //   pEdict[key] = value;
+//     // // }
+//     // console.log(inputs, textArea);
+//   });
+// }
+
+function asignar(index) {
+  indice = index;
+  const inputs = document.querySelectorAll("input");
+  const textArea = document.querySelector("textarea");
+  textArea.value = pacientes[index]["description"];
+  inputs.forEach((input) => {
+    const propiedad = input.getAttribute("name");
+    input.value = pacientes[index][propiedad];
   });
 }
 
-
-function editar(index, editButton) {
-  const inputs = document.querySelectorAll("input")
-  const textArea = document.querySelector("textarea");
-  const p =pacientes[index]
-  inputs.forEach((i) => {
-    
-    input.value = ;
-
-
-  
-  })
-  textArea.value = "";
+function editar(paciente) {
+  pacientes[indice] = paciente;
 }
