@@ -1,11 +1,20 @@
-const form = document.querySelector("form");
+pintarCartas();
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(form);
 
-  const pacientes = {};
+  const paciente = {};
   for (const [key, value] of formData) {
-    pacientes[key] = value;
+    paciente[key] = value;
   }
-  console.log(pacientes);
+  pacientes.push(paciente);
+  localStorage.setItem("ls", JSON.stringify(pacientes));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  let listaCache = localStorage.getItem("ls");
+  if (listaCache) {
+    pacientes = JSON.parse(listaCache);
+  }
 });
