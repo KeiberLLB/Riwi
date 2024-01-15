@@ -32,7 +32,6 @@ form.addEventListener("submit", (event) => {
   //     }
   //   });
   // }
-
   pintarCartas();
   localStorage.setItem("ls", JSON.stringify(pacientes));
   form.reset();

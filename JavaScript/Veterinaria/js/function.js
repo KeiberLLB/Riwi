@@ -82,4 +82,5 @@ function asignar(index) {
 
 function editar(paciente) {
   pacientes[indice] = paciente;
+  indice = undefined;
 }
