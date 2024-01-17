@@ -3,3 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary: #222;
+  --secondary: #6441a4;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--primary);
+}
+
+/*Banner*/
+
+.banner {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* INPUTS */
+
+.input-box {
+  position: relative;
+  width: 600px;
+
+  & input {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid var(--secondary);
+    outline: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    transition: 0.5s;
+  }
+  & span {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    pointer-events: none;
+    font-size: 16px;
+    color: #fff;
+  }
+}
