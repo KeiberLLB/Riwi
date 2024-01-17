@@ -6,7 +6,8 @@ const textoHTML = document.querySelector("#text");
 
 //Eventos
 btnText.addEventListener("click", () => {
-  consumirTxt();
+  // consumirTxt();
+  consumirTxtSegundaForma();
 });
 
 function consumirTxt() {
@@ -25,4 +26,22 @@ function consumirTxt() {
     .then((valor) => {
       textoHTML.textContent = valor;
     });
+}
+
+async function consumirTxtSegundaForma() {
+  const URL = "data/dta.txt";
+
+  try {
+    //plan A
+    const respuesta = await fetch(URL);
+    if (respuesta.status != 200) {
+      throw new Error("Ocurrió un error");
+    }
+    const valor = await respuesta.text();
+    textoHTML.textContent = valor;
+  } catch (error) {
+    //plan B
+    console.log(error);
+    textoHTML.textContent = error;
+  }
 }
