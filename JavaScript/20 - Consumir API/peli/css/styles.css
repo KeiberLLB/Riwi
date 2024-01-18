@@ -6,6 +6,8 @@
 :root {
   --primary: #222;
   --secondary: #6441a4;
+  --black: #000;
+  --fontP: #fff;
 }
 
 body {
@@ -35,9 +37,8 @@ body {
     outline: none;
     border-radius: 10px;
     background: var(--primary);
-    color: #fff;
+    color: var(--fontP);
     font-size: 16px;
-    transition: 0.5s;
   }
   & span {
     position: absolute;
@@ -45,6 +46,66 @@ body {
     padding: 20px;
     pointer-events: none;
     font-size: 16px;
-    color: #fff;
+    color: var(--fontP);
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+}
+
+.input-box input:focus ~ span,
+.input-box input:valid ~ span {
+  transform: translateX(20px) translateY(-10px);
+  font-size: 14px;
+  background: var(--secondary);
+  padding: 4px 10px;
+}
+
+.container-cards {
+  margin: 20px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  & h2 {
+    color: var(--fontP);
+  }
+
+  & .card {
+    background: var(--black);
+    border: 3px solid var(--secondary);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 350px;
+
+    flex-direction: column;
+    gap: 10px;
+
+    & .img-card {
+      background-size: cover;
+    }
+
+    & .tittle-movie {
+      color: var(--fontP);
+      text-align: center;
+      margin: 5px;
+      font-weight: bold;
+    }
+    & p {
+      font-weight: bold;
+      color: var(--fontP);
+      text-align: center;
+      & span {
+        font-weight: normal;
+      }
+    }
+    & button {
+      background: var(--secondary);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
   }
 }
