@@ -47,7 +47,7 @@ function printMovies(movies) {
           alt=""/>
       <p>Año <span>${movie.Year}</span></p>
       <p>Tipo <span>${movie.Type}</span></p>
-      <button>Ver más</button>
+      <button class="ver-mas" data-id="${movie.imdbID}">Ver más</button>
     </div>`;
   });
 }
@@ -59,3 +59,5 @@ function cleanHTML() {
 
   container.innerHTML = "";
 }
+
+function verMas(id) {}
