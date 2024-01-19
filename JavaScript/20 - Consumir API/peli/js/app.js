@@ -1,3 +1,5 @@
+import {callToApi,verMas} from "./functions.js";
+
 //selectores
 const inputTitle = document.querySelector("#search");
 let timer;
@@ -15,49 +17,14 @@ inputTitle.addEventListener("input", (event) => {
   }, 500);
 });
 
-//funcion para hacer el llamado a la API
-async function callToApi(title) {
-  const URL = `https://www.omdbapi.com/?apikey=690d22ef&s=${title}`;
-  //realizo la peticion HTTP con el servicio fetch
-  //await = codigo no bloqueante a codigo bloqueante
-  const response = await fetch(URL);
-  const data = await response.json();
-  printMovies(data.Search);
-}
-
-function printMovies(movies) {
-  cleanHTML();
-  //VALIDAR QUE SI EXISTAN PELICULAS
-  if (!movies) {
-    const titleError = document.createElement("h2");
-    titleError.textContent = "No se encontraron peliculas";
-    titleError.classList.add("alert");
-    container.appendChild(titleError);
+container.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.classList.contains("ver-mas")) {
+    const id = event.target.getAttribute("data-id");
+    verMas(id);
   }
 
-  // container.innerHTML = ""; ES LENTA
-  movies.forEach((movie) => {
-    //inyectar el HTML
-    container.innerHTML += `
-    <div class="card">
-      <h2 class="tittle-movie">${movie.Title}</h2>
-      <img
-          class="card-img"
-          src="${movie.Poster}"
-          alt=""/>
-      <p>Año <span>${movie.Year}</span></p>
-      <p>Tipo <span>${movie.Type}</span></p>
-      <button class="ver-mas" data-id="${movie.imdbID}">Ver más</button>
-    </div>`;
-  });
-}
-
-function cleanHTML() {
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
+  if (event.target.classList.contains("bx-arrow-back")) {
+    callToApi(inputTitle.value);
   }
-
-  container.innerHTML = "";
-}
-
-function verMas(id) {}
+});

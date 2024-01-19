@@ -70,26 +70,61 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   & .card-info {
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 700px;
+    height: 475px;
     gap: 10px;
     background: var(--black);
-    border: 3px solid var(--secondary);
+    border: 2px solid var(--secondary);
     padding: 10px;
     border-radius: 10px;
+    color: var(--fontP);
     & img {
       border-radius: 10px;
     }
     & .info {
+      & .bx-arrow-back {
+        font-size: 24px;
+        color: var(--fontP);
+        cursor: pointer;
+        align-self: flex-end;
+      }
       display: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
       width: 100%;
+      height: 100%;
       justify-content: space-around;
+      border-radius: 10px;
+      border: 1px solid var(--secondary);
+      background: var(--primary);
+      padding: 5px;
+      & p {
+        align-items: center;
+        justify-content: center;
+      }
+
+      & .title {
+        font-size: 150%;
+        font-weight: bold;
+      }
+      & .sub-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      & .sub-info2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+      }
     }
   }
 
