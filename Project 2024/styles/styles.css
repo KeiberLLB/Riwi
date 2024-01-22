@@ -13,3 +13,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  & nav {
+    width: 100vw;
+    display: flex;
+    background: var(--secondary);
+    color: var(--fontW);
+    & img {
+      width: 50px;
+    }
+  }
+}
