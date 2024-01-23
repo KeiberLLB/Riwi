@@ -14,10 +14,24 @@
   box-sizing: border-box;
 }
 body {
+  background-image: url(./img/Illustration\ 5Fondo.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
   & nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    justify-content: space-around;
     width: 100vw;
     display: flex;
-    background: var(--secondary);
+    background: var(--primary);
     color: var(--fontW);
     & img {
       width: 50px;
