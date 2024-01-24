@@ -6,16 +6,32 @@
 
 body {
   background: url("https://cdn.bitlysdowssl-aws.com/wp-content/uploads/2023/08/Spacex.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
+  /* background-position: center center; */
+  /* background-repeat: no-repeat; */
   background-attachment: fixed;
   background-size: cover;
+  /* flex-direction: column; */
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  & .container {
+    width: 80%;
+  }
 }
 
 .card {
+  background: rgb(255, 255, 255, 0.3);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
+  & h5 {
+    padding-top: 10px;
+  }
 }
