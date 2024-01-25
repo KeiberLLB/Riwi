@@ -98,7 +98,7 @@ async function updateUser(id) {
     name: nameUser.value,
     age: ageUser.value,
   };
-  const response = await fetch(`${URLBase}/users/${id}`, {
+  await fetch(`${URLBase}/users/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -107,9 +107,9 @@ async function updateUser(id) {
   });
   cache = undefined;
 }
-
+put;
 async function eliminar(id) {
-  const response = await fetch(`${URLBase}/users/${id}`, {
+  await fetch(`${URLBase}/users/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
