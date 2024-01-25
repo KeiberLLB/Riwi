@@ -35,3 +35,7 @@ body {
     padding-top: 10px;
   }
 }
+
+.modal-content {
+  height: 550px !important;
+}

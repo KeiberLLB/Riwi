@@ -1,11 +1,13 @@
-import { renderMain, verMas } from "./function.js";
+import { renderMain, verMas, getData } from "./function.js";
 const container = document.querySelector(".container");
-renderMain();
+const verm = document.querySelector(".btn-primary");
+getData();
+
 
 container.addEventListener("click", (event) => {
-  event.preventDefault();
   if (event.target.classList.contains("btn-primary")) {
-    const id = event.target.getAttribute("data-id");
+    const id = event.target.getAttribute("data-id") - 1;
+    // getData();
     verMas(id);
   }
 

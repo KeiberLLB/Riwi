@@ -1,24 +1,30 @@
 const container = document.querySelector(".container");
-
-export async function renderMain() {
-  // cleanBody();
+let cache;
+export async function getData() {
   const URL = "https://api.spacexdata.com/v3/launches";
   const response = await fetch(URL);
   const data = await response.json();
+  cache = data;
+  renderMain(data);
+}
+
+export function renderMain(data) {
   if (!data) {
     const titleError = document.createElement("h2");
     titleError.textContent = "No se encontraron mision";
     titleError.classList.add("alert");
     container.appendChild(titleError);
-  }
-  data.forEach((mision) => {
-    container.innerHTML += `
+  } else {
+    data.forEach((mision) => {
+      const imgDefault = "https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png";
+
+      container.innerHTML += `
     <div
       class="card d-flex flex-column align-items-center text-center col-3"
       style="width: 18rem"
     >
       <img
-        src="${mision.links.mission_patch_small}"
+        src="${mision.links.mission_patch_small || imgDefault}"
         class="card-img-top"
         alt="..."
       />
@@ -28,6 +34,7 @@ export async function renderMain() {
         
         <button
           type="button"
+          id="btn"
           data-id="${mision.flight_number}" 
           class="btn btn-primary"
           data-bs-toggle="modal"
@@ -37,12 +44,23 @@ export async function renderMain() {
         </button>
       </div>
     </div>`;
-  });
+    });
+  }
 }
-
-
-
+// export async function obtenerInf(id) {
+//   const data = await getData();
+//   const inf = data[id];
+//   console.log(inf);
+//   verMas(inf);
+// }
 export function verMas(id) {
-  console.log(id);
-}
+  let inf = cache[id];
+  console.log(inf);
 
+  const title = document.getElementById("exampleModalLabel");
+  title.textContent = `${inf.mission_name}`;
+  const video = document.querySelector(".modal-body");
+  video.innerHTML = `
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${inf.links.youtube_id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  `;
+}
