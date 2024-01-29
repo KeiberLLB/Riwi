@@ -44,6 +44,7 @@ async function createUser() {
   const user = {
     name: nameUser.value,
     age: ageUser.value,
+    id: Date.now(),
   };
   const response = await fetch(`${URLBase}/users`, {
     method: "POST",
