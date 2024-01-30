@@ -14,7 +14,7 @@ formLogin.addEventListener("submit", (event) => {
 });
 async function login() {
   const response = await fetch(`${URLBase}?email=${email.value}`);
-  const data = response.json();
+  const data = await response.json();
 
   if (!data.length) {
     console.log("Email no resgistrado");
