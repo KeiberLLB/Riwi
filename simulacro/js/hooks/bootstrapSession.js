@@ -2,7 +2,7 @@
   //Logica
   //Obtenemos la sesión del usuario del localStorage
   const isAuthenticated = localStorage.getItem("isAuthenticated");
-  console.log(isAuthenticated);
+
   //Obteno la ruta donde el usuario quiere acceder
   const path = window.location.pathname;
 

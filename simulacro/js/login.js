@@ -22,6 +22,7 @@ async function login() {
   if (data[0].password === password.value) {
     window.location.href = "administrator.html";
     localStorage.setItem("isAuthenticated", "true");
+    localStorage.setItem("userID", data[0].id);
   } else {
     console.log("Credenciales incorrectas");
   }

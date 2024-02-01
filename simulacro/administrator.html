@@ -121,7 +121,7 @@
                 <td>Últimas noticias sobre tecnología e innovación</td>
                 <td>
                   <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
+                  <button class="btn btn-danger delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -255,7 +255,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content">
+        <form id="form-category" class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Category</h1>
             <button
@@ -269,6 +269,7 @@
             <div class="mb-3">
               <label for="nameCategory" class="form-label">Name</label>
               <input
+                name="name"
                 type="text"
                 class="form-control"
                 id="nameCategory"
@@ -281,21 +282,23 @@
                 >Description</label
               >
               <textarea
+                name="description"
                 class="form-control"
                 id="descriptionCategory"
                 rows="3"
+                required
               ></textarea>
             </div>
           </div>
           <div class="modal-footer">
             <button
-              type="button"
+              type="submit"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
             </button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Save</button>
           </div>
         </form>
       </div>
@@ -310,7 +313,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content">
+        <form id="form-notice" class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Notice</h1>
             <button
@@ -335,7 +338,6 @@
               <label for="urlImage" class="form-label">Url Image</label>
               <input type="text" class="form-control" id="urlImage" />
             </div>
-
             <div class="mb-3">
               <label for="idCategory" class="form-label">Category</label>
               <select
@@ -373,6 +375,6 @@
       </div>
     </div>
     <script src="js/libs/bootstrap.bundle.min.js"></script>
-
+    <script src="./js/admin.js"></script>
   </body>
 </html>

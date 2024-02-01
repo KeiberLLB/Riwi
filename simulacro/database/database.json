@@ -1,6 +1,27 @@
 {
-  "news": [],
-  "categories": [],
+  "news": [
+    {
+      "name": "Title New",
+      "id": "laskdjf",
+      "date": "2024-01-01",
+      "description": "Últimas noticias sobre tecnología e innovación",
+      "url": "https://img.freepik.com/foto-gratis/mano-que-sostiene-campana-anuncios-marketing-megafono_53876-129003.jpg",
+      "userId": "d371",
+      "categoryId": "lasdf"
+    }
+  ],
+  "categories": [
+    {
+      "id": "60b6",
+      "name": "Sports",
+      "description": "Noticias y análisis deportivos"
+    },
+    {
+      "id": "2dc7",
+      "name": "Culture",
+      "description": "Eventos culturales, libros y arte"
+    }
+  ],
   "users": [
     {
       "id": "d371",
