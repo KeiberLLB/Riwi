@@ -10,7 +10,7 @@
   const routeActive = path.substring(path.lastIndexOf("/") + 1);
 
   //Creo una lista con todos los nombre de los archivos que yo quiero proteger
-  const privateRoutes = ["administrator.html"];
+  const privateRoutes = ["administrator.html"];//en el caso del proyecto deben volver privado ver y crear evnetos
 
   //Si la ruta acutal se encuentra dentro de las privadas Y el usuario no está autenticado entonces lo redirigimos al login
 

@@ -22,7 +22,7 @@ async function login() {
     return;
   }
   if (data[0].password === password.value) {
-    window.location.href = "administrator.html";
+    window.location.href = "administrator.html"; //en el caso del proyecto debe enviar al home
     localStorage.setItem("isAuthenticated", "true");
     localStorage.setItem("user", user);
   } else {

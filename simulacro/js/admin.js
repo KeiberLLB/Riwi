@@ -109,9 +109,6 @@ async function getNotices() {
   pintarNotices(data);
 }
 
-function pintarNews(data) {
-  cleanHTML();
-}
 
 function pintarNotices(data) {
   cleanHTML2();
