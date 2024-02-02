@@ -114,36 +114,7 @@
               </tr>
             </thead>
 
-            <tbody id="categorias-tbody">
-              <tr>
-                <td>1</td>
-                <td>Tecnología</td>
-                <td>Últimas noticias sobre tecnología e innovación</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger delete">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Deportes</td>
-                <td>Noticias y análisis deportivos</td>
-
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Cultura</td>
-                <td>Eventos culturales, libros y arte</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="categorias-tbody"></tbody>
           </table>
         </div>
         <div
@@ -292,8 +263,8 @@
           </div>
           <div class="modal-footer">
             <button
-              type="submit"
-              class="btn btn-secondary"
+              type="button"
+              class="closet btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
@@ -327,6 +298,7 @@
             <div class="mb-3">
               <label for="nameNotice" class="form-label">Name</label>
               <input
+                name="name"
                 type="text"
                 class="form-control"
                 id="nameNotice"
@@ -336,11 +308,17 @@
 
             <div class="mb-3">
               <label for="urlImage" class="form-label">Url Image</label>
-              <input type="text" class="form-control" id="urlImage" />
+              <input
+                name="url"
+                type="text"
+                class="form-control"
+                id="urlImage"
+              />
             </div>
             <div class="mb-3">
               <label for="idCategory" class="form-label">Category</label>
               <select
+                name="categoryId"
                 class="form-select"
                 aria-label="Selected Category"
                 id="idCategory"
@@ -355,6 +333,7 @@
                 >Notice description</label
               >
               <textarea
+                name="description"
                 class="form-control"
                 id="contentNotice"
                 rows="3"
