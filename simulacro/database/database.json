@@ -8,18 +8,32 @@
       "url": "https://img.freepik.com/foto-gratis/mano-que-sostiene-campana-anuncios-marketing-megafono_53876-129003.jpg",
       "userId": "d371",
       "categoryId": "lasdf"
+    },
+    {
+      "id": "45af",
+      "name": "Klopp dice adiós al Liverpool",
+      "url": "https://assets-es.imgfoot.com/media/cache/1200x675/klopp2324x.jpg",
+      "categoryId": "5978",
+      "description": "El técnico alemán dejará el conjunto red a final de temporada y la situación deportiva del guajiro quedará en el aire. Los colombianos cruzan los dedos para que la situación de James Rodríguez no se repita con él",
+      "userId": "d371",
+      "date": "2/2/2024"
     }
   ],
   "categories": [
     {
-      "id": "60b6",
-      "name": "Sports",
-      "description": "Noticias y análisis deportivos"
+      "name": "Culture",
+      "description": "Eventos culturales, libros y arte",
+      "id": "2dc7"
     },
     {
-      "id": "2dc7",
-      "name": "Culture",
-      "description": "Eventos culturales, libros y arte"
+      "id": "3212",
+      "name": "Tecnology",
+      "description": "Todo sobre nuevas tecnologias y ciencia"
+    },
+    {
+      "id": "5978",
+      "name": "Sports",
+      "description": "Noticias y análisis deportivos"
     }
   ],
   "users": [
