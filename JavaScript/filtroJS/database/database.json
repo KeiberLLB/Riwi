@@ -1,0 +1,71 @@
+{
+  "companies": [
+    {
+      "id": "2034",
+      "email": "admin@riwi.io",
+      "nameCompany": "Riwi",
+      "imageCompany": "https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png",
+      "nit": 90212132,
+      "password": "riwi2024"
+    },
+    {
+      "id": "2035",
+      "email": "admin@google.com",
+      "nameCompany": "Google",
+      "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      "nit": 90212132,
+      "password": "google2024"
+    },
+    {
+      "id": "1cce",
+      "email": "leandro1991.9@gmail.com",
+      "password": "Kllb1991",
+      "nameCompany": "Lazaro",
+      "imageCompany": "https://www.heraldrysinstitute.com/stemmi_nobiliari_miniature2022/webp/1/img/37162//Escudo+de+la+familia/L%C3%A1zaro.webp",
+      "nit": 1707742777403
+    },
+    {
+      "id": "64c2",
+      "email": "keiber@gmail.com",
+      "password": "Kllb1991",
+      "nameCompany": "Lazaro",
+      "imageCompany": "https://www.heraldrysinstitute.com/stemmi_nobiliari_miniature2022/webp/1/img/37162//Escudo+de+la+familia/L%C3%A1zaro.webp",
+      "nit": 1707745023549
+    }
+  ],
+  "jobs": [
+    {
+      "title": "Software Engineer",
+      "experience": "18",
+      "salary": "1500",
+      "location": "Bogota",
+      "modality": "In person",
+      "description": "Nos encontramos en la busqueda de un Software Engineer con amplia experiencia en PHP, JAVA, JavaScript, Python. Con excelente trabajo en equipo y bajo presión. Trabajo presencial. ",
+      "publicationDate": "2/12/2024",
+      "companyId": "1cce",
+      "id": "6f0dasd"
+    },
+    {
+      "title": "Software Engineer",
+      "experience": "18",
+      "salary": "1500",
+      "location": "Bogota",
+      "modality": "In person",
+      "description": "Nos encontramos en la busqueda de un Software Engineer con amplia experiencia en PHP, JAVA, JavaScript, Python. Con excelente trabajo en equipo y bajo presión. Trabajo presencial. ",
+      "publicationDate": "2/12/2024",
+      "companyId": "2034",
+      "id": "6f0d"
+    },
+    {
+      "id": "3fe2",
+      "title": "Desarrollador Web",
+      "experience": "24",
+      "salary": "3700000",
+      "location": "Medellín",
+      "modality": "Remote",
+      "description": "Excelente oportunidad laboral, trabaja de forma remota con un excelente salario. Horarios flexibles. No fines de semana. Indispensable cumplir con todas las metas y actividades en el timpo Requerido.\n\nJAVASCRIPT Fullstack",
+      "publicationDate": "2/12/2024",
+      "companyId": "2034"
+    }
+  ]
+}
