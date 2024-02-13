@@ -3,7 +3,7 @@
     {
       "id": "2034",
       "email": "admin@riwi.io",
-      "nameCompany": "Riwi",
+      "nameCompany": "Riwi SAS",
       "imageCompany": "https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png",
       "nit": 90212132,
       "password": "riwi2024"
@@ -20,7 +20,7 @@
       "id": "1cce",
       "email": "leandro1991.9@gmail.com",
       "password": "Kllb1991",
-      "nameCompany": "Lazaro",
+      "nameCompany": "Lazaro Inc",
       "imageCompany": "https://www.heraldrysinstitute.com/stemmi_nobiliari_miniature2022/webp/1/img/37162//Escudo+de+la+familia/L%C3%A1zaro.webp",
       "nit": 1707742777403
     },
@@ -28,8 +28,8 @@
       "id": "64c2",
       "email": "keiber@gmail.com",
       "password": "Kllb1991",
-      "nameCompany": "Lazaro",
-      "imageCompany": "https://www.heraldrysinstitute.com/stemmi_nobiliari_miniature2022/webp/1/img/37162//Escudo+de+la+familia/L%C3%A1zaro.webp",
+      "nameCompany": "Bastos SAS",
+      "imageCompany": "https://www.heraldrysinstitute.com/stemmi_nobiliari_miniature2022/webp/1/img/18069//Coat+of+arms+of+family/Bastos.webp",
       "nit": 1707745023549
     }
   ],
@@ -66,6 +66,61 @@
       "description": "Excelente oportunidad laboral, trabaja de forma remota con un excelente salario. Horarios flexibles. No fines de semana. Indispensable cumplir con todas las metas y actividades en el timpo Requerido.\n\nJAVASCRIPT Fullstack",
       "publicationDate": "2/12/2024",
       "companyId": "2034"
+    },
+    {
+      "id": "1a34",
+      "title": "Senior PHP",
+      "experience": "48",
+      "salary": "4800000",
+      "location": "Medellín",
+      "modality": "In person",
+      "description": "Realizar actividades propias de programación web usando Php y javascrip , con acceso a base de datos posgresql, contrato a termino indefinido las actividades se deben realizar de forma presencial, se desarrolla para un erp financiero del sector solidario, es importante que el candidato tenga conocimientos en sentencias sql standar.",
+      "publicationDate": "2/13/2024",
+      "companyId": "64c2"
+    },
+    {
+      "id": "b452",
+      "title": "Desarrollador FullStack PHP  Laravel",
+      "experience": "48",
+      "salary": "5200000",
+      "location": "Bogota",
+      "modality": "In person",
+      "description": "Desarrollador Web PHP Senior con dominio total del framework CODEIGNITER. Buscamos desarrollador PHP para equipo de desarrollo de sitio web robusto (backend y frontend), que cumpla los siguientes requerimientos: * Experto en PHP & CODEINGNITER * Entendimiento de la estructura MVC. * Manejo de base de datos en MYSQL y similares. * Manejo de framework CODEIGNITER(si no es EXPERTO EN CODEIGNITER NO APLICAR ). * Conocimientos avanzados en Javascript / JQUERY. * Conocimientos en avanzados HTML,HTML5, CSS, NODE.JS, ANGULAR y Bootstrap * Conocimientos en React, Electron, AI y Ionic * Manejo de control de versiones usando Git / Gitlab Contratación Inmediata ",
+      "publicationDate": "2/13/2024",
+      "companyId": "64c2"
+    },
+    {
+      "id": "663b",
+      "title": "Trabajo Desde Casa Desarrollador Python Backend / Investigación y Desarrollo",
+      "experience": "28",
+      "salary": "3200000",
+      "location": "Medellín",
+      "modality": "Remote",
+      "description": "Estamos buscando Arquitectos Backend Python sobresalientes para unirse al Equipo de Investigación y Desarrollo (I+D) de BairesDev.\nNuestro equipo de I+D es la parte esencial de nuestras soluciones tecnológicas que impulsan millones en ingresos cada año, por lo que sólo contratamos a lo mejor de lo mejor.\nDentro del equipo encontrarás muchos retos diferentes: Análisis de datos, Machine Learning, Desktop y desarrollos web son algunos de los más relevantes ahora mismo para impulsar la innovación, ¡notarás que cada día surgen cosas nuevas!",
+      "publicationDate": "2/13/2024",
+      "companyId": "1cce"
+    },
+    {
+      "title": "Desarrollador JAVA O .NET",
+      "experience": "18",
+      "salary": "4800000",
+      "location": "Bogota",
+      "modality": "Remote",
+      "description": "¡Únete a nuestro equipo innovador! Ofrecemos la oportunidad de crecimiento como desarrollador.\n\nFormación: Estudiantes de 8 semestre en adelante de ingeniería de sistemas, ingeniería de software, ingeniería electrónica, ingeniería telemática u afines al sector TI.\n\nExperiencia: ¡Buscamos talento con mínimo 2 años de desarrollo en Java o .NET SOLO DEL SECTOR BANCARIO! Además, si tienes disposición para aprender COBOL, ¡eres la persona que buscamos!",
+      "publicationDate": "2/13/2024",
+      "companyId": "2035",
+      "id": "b933"
+    },
+    {
+      "id": "4bb0",
+      "title": "Desarrollador JAVA y Springboot",
+      "experience": "36",
+      "salary": "6200000",
+      "location": "No Amplica",
+      "modality": "Remote",
+      "description": "Importante empresa de Tecnologia busca profesional en ingeniera y carreras afines con Sólida experiencia en desarrollo, entendiendo la lógica de programación que desee liderar equipos de ingeniería, que tenga comprensión técnica, realización de pruebas de sofware, que pueda participar en discusiones de arquitectura con ingenieros y traducir proyectos y conceptos técnicos complejos para no ingenieros. Facilitar la mejora continua de los procesos, asegurara buenos procesos de desarrollo y entregue software de calidad de manera constante.",
+      "publicationDate": "2/13/2024",
+      "companyId": "2035"
     }
   ]
 }
