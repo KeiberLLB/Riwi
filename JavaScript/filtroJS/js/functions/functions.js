@@ -167,7 +167,7 @@ export async function printJobs() {
   const datajobs = await jobsLogin();
   cleanHTML();
 
-  const infC = datajobs.filter((i) => i.companyId == id)
+  const infC = datajobs.filter((i) => i.companyId == id);
   nameCompany.innerHTML = `${infC[0].company.nameCompany}`;
   imgCompany.innerHTML = `<img
               src="${infC[0].company.imageCompany}"
@@ -180,7 +180,6 @@ export async function printJobs() {
 
   datajobs.forEach((job) => {
     if (job.companyId === `${id}`) {
-      
       containerJobs.innerHTML += `<tr>
                     <td>
                       <div class="d-middle">
