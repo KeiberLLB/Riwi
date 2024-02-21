@@ -16,6 +16,9 @@ monokai pro
 bootstrap intellisense
 JavaScritp
 Material Icon Theme
+git graph
+git History
+gitlens
 https://vscode.dev/profile/github/21f2d8fd0e99860685ed601874ece580
 https://pixabay.com/api/?key=41911933-b1b5cda18a9e20d0315aa3b3e&?q=pokemon&per_page=150
 https://www.i18next.com/overview/getting-started
