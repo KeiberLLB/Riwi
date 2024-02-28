@@ -41,3 +41,18 @@ INSERT INTO nombre_tabla (atritubo1,atributo2) VALUES (valor1,valor2);
 --comando para ver la informacion de la tabla
 
 SELECT * FROM nombre_tabla;
+
+--agregar nuevo atributo despues de que la tabla ya este creada
+
+ALTER TABLE nombre_tabla ADD COLUMN nombre_nuevo_atributo tipo_ dato;
+--ejemplo
+ALTER TABLE coders ADD COLUMN direccion varchar(40) unique not null;
+
+--Comando para modificar el tipo de dato o restricciones de un atributo ya creado
+
+ALTER TABLE nombre_tabla MODIFY COLUMN nombre_atributo tipo reglas;
+
+--Comando para modificar el nombre de un atributo
+
+ALERT TABLE nombre_tabla
+CHANGE COLUMN nombre_atributo_actual nuevo_nombre_atributo tipo_dato restricciones --opcional;
