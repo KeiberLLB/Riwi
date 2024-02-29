@@ -1,7 +1,7 @@
-crear base de datos 
+#crear base de datos 
 CREATE DATABASE ejercicio_1;
 
-usar base de datos
+#usar base de datos
 use ejercicio_1;
 
 create table centros_educativos(
@@ -22,23 +22,23 @@ create table estudiantes(
 
 
 
-Creando tabla con atributos
+#Creando tabla con atributos
 CREATE TABLE coders(
 	id INT PRIMARY KEY auto_increment,
     nombre varchar(40),
     email varchar(40) unique not null);
 
-mostrar la tabla
+#mostrar la tabla
 SHOW TABLES;
 
-descripcion tabla
+#descripcion tabla
 DESC coders;
 
-insertar datos en la tabla
+#insertar datos en la tabla
 INSERT INTO coders (nombre,email) VALUES ("Juan","juan@gmail.com"),("WW","ww.gmail.com");
-en values, si se colocan dos parentesis separados por comas agrega dos campos, pueden ser mas
+#en values, si se colocan dos parentesis separados por comas agrega dos campos, pueden ser mas
 
-mostrar toda la informacion de la tabla
+#mostrar toda la informacion de la tabla
 SELECT * FROM coders;
 
 ALTER TABLE coders ADD COLUMN fecha_nacimiento DATE;
