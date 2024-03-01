@@ -18,10 +18,6 @@ create table estudiantes(
     constraint fk_centro_educativo foreign key(id_centro_educativo) references centros_educativos(id)
     );
 
-
-
-
-
 #Creando tabla con atributos
 CREATE TABLE coders(
 	id INT PRIMARY KEY auto_increment,
@@ -33,6 +29,8 @@ SHOW TABLES;
 
 #descripcion tabla
 DESC coders;
+
+DROP TABLE  edificios;#eliminar table existentes 
 
 #insertar datos en la tabla
 INSERT INTO coders (nombre,email) VALUES ("Juan","juan@gmail.com"),("WW","ww.gmail.com");
@@ -47,5 +45,7 @@ ALTER TABLE coders MODIFY COLUMN fecha_nacimiento DATE NOT NULL;
 DELETE FROM coders WHERE coders.id=6;
 
 ALTER TABLE coders change column fecha_nacimiento fecha_ingreso DATE;
+
+
 
 

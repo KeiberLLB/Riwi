@@ -27,7 +27,7 @@ alter table edificios
 add constraint fk_id_conjunto foreign key(id_conjunto)
 references unidades_residenciales(nit_conjunto);
  
-DROP TABLE  edificios;#eliminar table existentes 
+DROP TABLE unidades_residenciales;#eliminar table existentes 
 
 SELECT version();
 
