@@ -77,6 +77,18 @@ public class Main {
             }
         }
          */
+        //Ejercio 3
+        //Kilometros a millas
+        String kml = JOptionPane.showInputDialog(null,"KILOMETROS A MILLAS \n Ingrese el valor a convertir");
+        double num = Double.parseDouble(klm);
+
+        if (num <=0){
+            JOptionPane.showInputDialog(null, "Valor ingresado no es valido");
+        }else{
+            JOptionPane.showInputDialog(null, )
+
+        }
+
 
     }
 }
