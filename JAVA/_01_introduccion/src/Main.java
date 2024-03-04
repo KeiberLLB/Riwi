@@ -42,7 +42,7 @@ public class Main {
 
         //Ejercicio 1
         //Calculadora basica
-
+        /*
         Scanner objScanner1 = new Scanner(System.in);
         Object message;
         String option = JOptionPane.showInputDialog(null, "MENU DE OPERACIONES \n 1. Sumar \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
@@ -76,5 +76,9 @@ public class Main {
                     break;
             }
         }
+         */
+
     }
 }
+
+
