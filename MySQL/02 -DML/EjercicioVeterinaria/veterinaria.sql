@@ -493,3 +493,42 @@ INNER JOIN servicio
 ON citas.servicio_ser_id = servicio.ser_id
 INNER JOIN medico
 ON citas.medico_med_id = medico.med_id;
+
+#Obtener el promedio del costo de servicios por especialización que superen un costo promedio de 100
+SELECT AVG(ser_costo)
+FROM servicio
+WHERE ser_costo >100;
+
+#Listar información de contacto de clientes, combinando nombre, correo, y teléfono en un solo campo
+SELECT CONCAT(cli_nombre, ' ', cli_correo , ' ' , cli_telefono) AS Info_clientes
+FROM cliente;
+
+#Obtener la última visita (fecha más reciente de cita) para cada mascota
+SELECT mas_nombre, max(cit_fecha) as cita_mas_reciente
+FROM citas
+INNER JOIN mascotas
+ON mascotas_mas_id=mas_id
+group by mas_nombre;
+
+#Seleccionar los medicamentos que han sido prescritos en alguna historia clínica
+select *
+from historias_clinicas_has_medicamentos;
+
+select med_nombre
+from historias_clinicas_has_medicamentos
+inner join medicamentos
+on medicamentos_med_id=med_id
+inner join historias_clinicas
+on historias_clinicas_his_id=his_id
+group by med_nombre;
+
+#Listar todas las citas, incluyendo información de la mascota, el servicio, y la sede, ordenadas por fecha
+select cit_fecha, mas_nombre, ser_procedimiento, sed_nombre
+from citas
+inner join mascotas
+on mas_id=mascotas_mas_id
+inner join servicio
+on ser_id= servicio_ser_id
+inner join sede
+on sed_id=sede_sed_id
+order by cit_fecha desc;
