@@ -17,15 +17,14 @@ public class Main {
             System.out.println("i = " + i);
         }
         */
+
         //Ejercio 3
         //Kilometros a millas
-        String input;
+        String input = "";
         double number=0;
         boolean validInput = false;
-
         while (!validInput) {
             input = JOptionPane.showInputDialog(null, "Ingrese los kilometros a convertir:");
-
             // Verifica si el input es un número válido
             try {
                 number = Double.parseDouble(input);
@@ -34,11 +33,10 @@ public class Main {
                 JOptionPane.showMessageDialog(null, "Por favor, ingrese un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
-
         if (number <=0){
             JOptionPane.showInputDialog(null, "Valor ingresado no es valido");
         }else{
             JOptionPane.showMessageDialog(null,  number + " kilometros"+"="+(number/1.60934)+" "+"millas");
         }
     }
-}
+}f

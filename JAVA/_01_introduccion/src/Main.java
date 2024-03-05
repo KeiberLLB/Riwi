@@ -38,11 +38,10 @@ public class Main {
         } else {
             System.out.println(nombre + " Eres menor de edad");
         }
-    */
 
+         */
         //Ejercicio 1
         //Calculadora basica
-        /*
         Scanner objScanner1 = new Scanner(System.in);
         Object message;
         String option = JOptionPane.showInputDialog(null, "MENU DE OPERACIONES \n 1. Sumar \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
@@ -76,20 +75,6 @@ public class Main {
                     break;
             }
         }
-         */
-        //Ejercio 3
-        //Kilometros a millas
-        String kml = JOptionPane.showInputDialog(null,"KILOMETROS A MILLAS \n Ingrese el valor a convertir");
-        double num = Double.parseDouble(klm);
-
-        if (num <=0){
-            JOptionPane.showInputDialog(null, "Valor ingresado no es valido");
-        }else{
-            JOptionPane.showInputDialog(null, )
-
-        }
-
-
     }
 }
 
