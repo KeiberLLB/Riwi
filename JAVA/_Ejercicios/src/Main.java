@@ -40,6 +40,5 @@ public class Main {
         }else{
             JOptionPane.showMessageDialog(null,  number + " kilometros"+"="+(number/1.60934)+" "+"millas");
         }
-
     }
 }
