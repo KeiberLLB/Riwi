@@ -6,6 +6,9 @@ public class Usuario {
     private ArrayList<Usuario> usuarios;
     private int id;
     private int idCuenta;
-    name, contraseña
+    private String nombre;
+    private String contraseña;
+
+    //Falta setter and getter, y el constructor vacio y otro con los datos necesarios (Todos menos el array)
 
 }

@@ -40,15 +40,19 @@ public class CuentaBancaria {
     }
 
     public void retiroCuenta(int retiro){
-        this.saldoCuenta-=retiro;
-        JOptionPane.showMessageDialog(null, "Retiro realizado con éxito! \n"+"Nuevo saldo: "+this.saldoCuenta);
+        if (retiro<this.saldoCuenta){
+            this.saldoCuenta-=retiro;
+            JOptionPane.showMessageDialog(null, "Retiro realizado con éxito! \n"+"Nuevo saldo: "+this.saldoCuenta);
+        }else{
+            JOptionPane.showMessageDialog(null, "Saldo insuficiente!");
+        }
     }
     public void consignacionCuenta(int consignacion){
         this.saldoCuenta+=consignacion;
         JOptionPane.showMessageDialog(null,"Consignación realizada con éxito! \n"+"Nuevo saldo: "+this.saldoCuenta);
     }
 
-    protected void menuUsuario(){
+    public void menuUsuario(){
         int option=0;
         do {
             try {

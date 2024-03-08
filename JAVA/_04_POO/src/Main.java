@@ -47,10 +47,11 @@ public class Main {
                                 nombreTitular,
                                 saldoCuenta
                         );
-                        break;
-                    case 2:
                         objCuenta.menuUsuario();
                         break;
+//                    case 2:
+//                        objCuenta.menuUsuario();
+//                        break;
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Caracteres no validos");
