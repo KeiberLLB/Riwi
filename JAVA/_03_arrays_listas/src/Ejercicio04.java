@@ -55,11 +55,9 @@ public class Ejercicio04 {
                         } else {
                             //variable que almacenará las ciudades para poder mostrarlas en una sola pantalla
                             String ciudades = "";
-
                             //forma de recorrer un arraylist
                             for (String ciudad : itinerario) {
                                 String[] palabras = ciudad.split("\\s+");
-
                                 StringBuilder resultado = new StringBuilder();
                                 for (String palabra : palabras) {
                                     String palabraCapitalizada = palabra.toUpperCase().charAt(0) + palabra.substring(1).toLowerCase();
@@ -86,7 +84,6 @@ public class Ejercicio04 {
                         for (String ciudad : itinerario) {
                             if (!visitadas.contains(ciudad)) {
                                 String[] palabras = ciudad.split("\\s+");
-
                                 StringBuilder resultado = new StringBuilder();
                                 for (String palabra : palabras) {
                                     String palabraCapitalizada = palabra.toUpperCase().charAt(0) + palabra.substring(1).toLowerCase();
@@ -103,16 +100,13 @@ public class Ejercicio04 {
                             JOptionPane.showMessageDialog(null, "No hay ciudades visitadas aún!");
                         } else {
                             for (String ciudad : visitadas) {
-
                                 String[] palabras = ciudad.split("\\s+");
-
                                 StringBuilder resultado = new StringBuilder();
                                 for (String palabra : palabras) {
                                     String palabraCapitalizada = palabra.toUpperCase().charAt(0) + palabra.substring(1).toLowerCase();
                                     resultado.append(palabraCapitalizada).append(" ");
                                 }
                                 cVist += "** " + resultado + "\n";
-
                             }
                             JOptionPane.showMessageDialog(null, "Ciudades Pendientes\n" + cVist);
                         }
