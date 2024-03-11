@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Riwi.iml" filepath="$PROJECT_DIR$/.idea/Riwi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/_01_introduccion/_01_introduccion.iml" filepath="$PROJECT_DIR$/JAVA/_01_introduccion/_01_introduccion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/_02_bucles/_02_bucles.iml" filepath="$PROJECT_DIR$/JAVA/_02_bucles/_02_bucles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/_03_arrays_listas/_03_arrays_listas.iml" filepath="$PROJECT_DIR$/JAVA/_03_arrays_listas/_03_arrays_listas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/_04_POO/_04_POO.iml" filepath="$PROJECT_DIR$/JAVA/_04_POO/_04_POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/_05_inventario_POO/_05_inventario_POO.iml" filepath="$PROJECT_DIR$/JAVA/_05_inventario_POO/_05_inventario_POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA/_Ejercicios/_Ejercicios.iml" filepath="$PROJECT_DIR$/JAVA/_Ejercicios/_Ejercicios.iml" />
+    </modules>
+  </component>
+</project>
