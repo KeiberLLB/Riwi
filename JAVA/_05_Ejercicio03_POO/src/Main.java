@@ -19,7 +19,6 @@ public class Main {
                 case 1:
                     int option2 = 0;
                     do {
-
                         System.out.println("""
                                 MENU DE CURSOS
                                 1. Crear un curso.
@@ -42,7 +41,6 @@ public class Main {
                                 objGestion.listarCursos();
                                 break;
                         }
-
                     } while (option2 != 4);
                     break;
                 case 2:
@@ -79,16 +77,11 @@ public class Main {
                                 } else {
                                     curso.listarEstudiantes();
                                 }
-
                                 break;
                         }
                     } while (option3 != 4);
-
                     break;
             }
-
         } while (option != 3);
-
-
     }
 }
