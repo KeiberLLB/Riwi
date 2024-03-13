@@ -67,7 +67,7 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso\n" +
-                "código= " + codigo + '\n' +
-                "nombre Curso= " + nombreC + '\n';
+                "código= " + codigo + "\n" +
+                "nombre Curso= " + nombreC + "\n";
     }
 }
