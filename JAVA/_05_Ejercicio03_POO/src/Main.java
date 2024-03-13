@@ -5,7 +5,6 @@ public class Main {
         //Instancias
         Scanner objScan = new Scanner(System.in);
         GestionCurso objGestion = new GestionCurso();
-
         int option = 0;
         do {
             System.out.println("""
@@ -54,7 +53,6 @@ public class Main {
                                 4. Salir
                                 """);
                         option3 = objScan.nextInt();
-
                         switch (option3) {
                             case 1:
                                 objGestion.listarCursos();
@@ -65,6 +63,21 @@ public class Main {
                                     System.out.println("Curso no encontrado");
                                 } else {
                                     curso.guardarEstudiante(objScan);
+                                }
+                                break;
+                            case 2: //caso para eliminar un estudiante
+                                //1. listar cursos
+                                objGestion.listarCursos();
+                                //2. preguntar al usuario cúal es el curso del estudiante a eliminar
+                                System.out.println("Ingrese el código del curso del estudiante a eliminar");
+                                codigo = objScan.next();
+                                //3. llamar al método que elimina
+                                Curso objCurso = objGestion.buscarPorCodigo(codigo);
+                                if (objCurso==null){
+                                    System.out.println("Código no valido!");
+                                }else {
+                                    //eliminarq
+                                    objCurso.eliminarEstudiante(objScan);
                                 }
                                 break;
                             case 3:

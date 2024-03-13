@@ -1,13 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class GestionCurso {
     private ArrayList<Curso> listaCursos;
-
     public GestionCurso() {
         this.listaCursos = new ArrayList<>();
     }
-
     //METODOS
     public void guardarCurso(Scanner objScan) {
         System.out.println("Agregar Curso");
@@ -24,7 +21,6 @@ public class GestionCurso {
             listaCursos.add(objCurso);
         }
     }
-
     public Curso buscarPorCodigo(String codigoBuscar) {
         for (Curso cursoT : this.listaCursos) {
             if (cursoT.getCodigo().equalsIgnoreCase(codigoBuscar)) {
@@ -33,7 +29,6 @@ public class GestionCurso {
         }
         return null;
     }
-
     public void listarCursos() {
         if (this.listaCursos.isEmpty()){
             System.out.println("No hay cursos registrados");
@@ -44,11 +39,9 @@ public class GestionCurso {
             }
         }
     }
-
     public ArrayList<Curso> getListaCursos() {
         return listaCursos;
     }
-
     public void setListaCursos(ArrayList<Curso> listaCursos) {
         this.listaCursos = listaCursos;
     }
