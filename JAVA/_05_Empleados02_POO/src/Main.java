@@ -18,6 +18,5 @@ public class Main {
         gestionEmpleados.mostrarEmpleadosT();
         gestionEmpleados.mostrarEmpleadosP();
 
-
     }
 }
