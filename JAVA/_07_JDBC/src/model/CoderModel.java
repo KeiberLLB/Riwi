@@ -14,6 +14,7 @@ import java.util.List;
 
 public class CoderModel implements CRUD {
 
+
     @Override
     public Object insert(Object obj) {
         //1. Abrir Conexión
@@ -23,8 +24,7 @@ public class CoderModel implements CRUD {
 
         try {
             String sql = "insert into coder(name,age,clan) values(?,?,?);";
-            System.out.println(sql);
-            PreparedStatement objPreparedStatement = (PreparedStatement) objConnection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement objPreparedStatement = (PreparedStatement) objConnection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             //asignar los signos de interrogación
             objPreparedStatement.setString(1, coder.getName());
             objPreparedStatement.setInt(2, coder.getAge());
@@ -40,7 +40,7 @@ public class CoderModel implements CRUD {
             JOptionPane.showMessageDialog(null, "Coder insertion was successful");
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Data Error "+e.getMessage());
+            JOptionPane.showMessageDialog(null, "Data Error " + e.getMessage());
         }
         ConfigDB.closeConnection();
         return coder;
@@ -48,11 +48,43 @@ public class CoderModel implements CRUD {
 
     @Override
     public boolean update(Object object) {
+        Coder coder = (Coder) object;
+        Connection objConnection = ConfigDB.openConnection();
+
+        try {
+            String sql = "UPDATE coder SET name = ?, age = ?, clan = ? WHERE (id = ?);";
+            PreparedStatement objPreparedStatement = (PreparedStatement) objConnection.prepareStatement(sql);
+            objPreparedStatement.setString(1, coder.getName());
+            objPreparedStatement.setInt(2, coder.getAge());
+            objPreparedStatement.setString(3, coder.getClan());
+            objPreparedStatement.setInt(4, coder.getId());
+            objPreparedStatement.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Coder update was successful");
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Data Error " + e.getMessage());
+        }
+        ConfigDB.closeConnection();
         return false;
     }
 
+
     @Override
-    public boolean delete(Object object) {
+    public boolean delete(int id) {
+        Connection objConnection = ConfigDB.openConnection();
+        try {
+            String sql = "DELETE FROM coder WHERE id=?;";
+            PreparedStatement objPreparedStatement = (PreparedStatement) objConnection.prepareStatement(sql);
+            objPreparedStatement.setInt(1, id);
+            objPreparedStatement.execute();
+            objPreparedStatement.close();
+            JOptionPane.showMessageDialog(null, "Coder delete was successful");
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Data Error " + e.getMessage());
+        }
+        ConfigDB.closeConnection();
         return false;
     }
 

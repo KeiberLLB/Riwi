@@ -27,6 +27,9 @@ public class Main {
                 case "2":
                     objCoderController.insert();
                     break;
+                case "4":
+                    objCoderController.delete();
+                    break;
             }
         }while (!option.equals("6"));
     }
