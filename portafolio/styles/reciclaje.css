@@ -1,0 +1,51 @@
+& .img:hover {
+      transform: scale(2.5) translateY(15px);
+      border-radius: 25%;
+    }
+
+
+    & .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    & .a {
+      text-decoration: none;
+
+      & i {
+        width: 35px;
+        height: 35px;
+        font-size: 30px;
+        border-radius: 100%;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    & .x {
+      & i:hover {
+        color: black;
+        transform: scale(1.4);
+      }
+    }
+    & .i {
+      & i:hover {
+        color: magenta;
+        transform: scale(1.4);
+      }
+    }
+    & .y {
+      & i:hover {
+        color: red;
+        transform: scale(1.4);
+      }
+    }
+    & .l {
+      & i:hover {
+        color: blue;
+        transform: scale(1.4);
+      }
+    }
+  }
