@@ -9,8 +9,7 @@ public class Coder {
     public Coder() {
     }
 
-    public Coder(int id, String name, int age, String clan) {
-        this.id = id;
+    public Coder(String name, int age, String clan) {
         this.name = name;
         this.age = age;
         this.clan = clan;

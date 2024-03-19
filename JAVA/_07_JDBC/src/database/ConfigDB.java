@@ -11,7 +11,6 @@ public class ConfigDB {
     //método par abrir la conexión entre java y la base de datos
     public static Connection openConnection() {
         try {
-
             //class forName permite obtener o implementar el driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -30,7 +29,6 @@ public class ConfigDB {
         }
         return objConnection;
     }
-
     public static void closeConnection() {
         try {
             if (objConnection != null) objConnection.close();
