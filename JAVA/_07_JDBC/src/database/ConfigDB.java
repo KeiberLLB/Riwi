@@ -8,7 +8,6 @@ public class ConfigDB {
     //Variable que va a contener el estado de la conexión
     static Connection objConnection = null;
 
-
     //método par abrir la conexión entre java y la base de datos
     public static Connection openConnection() {
         try {
