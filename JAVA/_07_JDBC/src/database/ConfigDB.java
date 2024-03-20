@@ -26,6 +26,7 @@ public class ConfigDB {
         }
         return objConnection;
     }
+
     public static void closeConnection() {
         try {
             if (objConnection != null) objConnection.close();
