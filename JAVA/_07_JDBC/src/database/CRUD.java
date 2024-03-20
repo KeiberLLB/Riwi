@@ -8,7 +8,7 @@ public interface CRUD {
 
     public boolean update(Object object);
 
-    public boolean delete(int id);
+    public boolean delete(Object object);
 
     public List<Object> findAll();
 
