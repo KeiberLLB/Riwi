@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class ConfigDB {
     //Variable que va a contener el estado de la conexión
     static Connection objConnection = null;
