@@ -17,7 +17,6 @@ public class Main {
                     4. Delete Coder
                     5. Get By name
                     6. Exit
-                    select * from coder where name like '%maria%';
                     Choose an option:
                     """);
             switch (option){

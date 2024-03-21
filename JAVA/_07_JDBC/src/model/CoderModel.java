@@ -53,13 +53,13 @@ public class CoderModel implements CRUD {
         Connection objConnection = ConfigDB.openConnection();
 
         try {
-            String sql = "UPDATE coder SET name = ?, age = ?, clan = ? WHERE (id = ?);";
+            String sql = "UPDATE coder SET name = ?, age = ?, clan = ? WHERE id = ?;";
             PreparedStatement objPreparedStatement = objConnection.prepareStatement(sql);
+            // dar valor a los ? (parámetros de Query)
             objPreparedStatement.setString(1, coder.getName());
             objPreparedStatement.setInt(2, coder.getAge());
             objPreparedStatement.setString(3, coder.getClan());
             objPreparedStatement.setInt(4, coder.getId());
-            objPreparedStatement.executeUpdate();
 
             int totalAffectedRows = objPreparedStatement.executeUpdate();
             if (totalAffectedRows > 0) {

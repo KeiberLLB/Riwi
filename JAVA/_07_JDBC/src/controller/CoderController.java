@@ -6,6 +6,7 @@ import model.CoderModel;
 import javax.swing.*;
 import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CoderController {
     CoderModel objCoderModel;
@@ -16,15 +17,20 @@ public class CoderController {
     }
 
     public void getAll() {
+        String listCoderString = this.getAll(this.objCoderModel.findAll());
+        JOptionPane.showMessageDialog(null, listCoderString);
+    }
+
+    public String getAll(List<Object> listObject) {
         String list = "List Coders\n";
         //Iteramos sobre la lista que devuelve el método find all
-        for (Object obj : this.objCoderModel.findAll()) {
+        for (Object obj : listObject) {
             //convertimos o casteamos el objeto tipo Object a un coder
             Coder objCoder = (Coder) obj;
             //concatenamos la información
             list += objCoder.toString() + "\n";
         }
-        JOptionPane.showMessageDialog(null, list);
+        return list;
     }
 
     public void insert() {
@@ -42,11 +48,7 @@ public class CoderController {
     }
 
     public void delete() {
-        String listCoderString = "CODER LIST\n";
-        for (Object obj : this.objCoderModel.findAll()) {
-            Coder objCoder = (Coder) obj;
-            listCoderString += objCoder.toString() + "\n";
-        }
+        String listCoderString = this.getAll(this.objCoderModel.findAll());
         int confirm = 1;
         int idDelete = Integer.parseInt(JOptionPane.showInputDialog(listCoderString + "Enter the ID of the coder to delete: "));
         Coder objCoder = (Coder) this.objCoderModel.findById(idDelete);
@@ -62,25 +64,18 @@ public class CoderController {
     }
 
     public void update() {
-        String listCoderString = "CODER LIST\n";
-        for (Object obj : this.objCoderModel.findAll()) {
-            Coder objCoder = (Coder) obj;
-            listCoderString += objCoder.toString() + "\n";
-        }
-        int confirm = 1;
+        String listCoderString = this.getAll(this.objCoderModel.findAll());
+
         int idUpdate = Integer.parseInt(JOptionPane.showInputDialog(listCoderString + "Enter the ID of the coder to update: "));
-        Coder objCoder = (Coder) objCoderModel.findById(idUpdate);
+        Coder objCoder = (Coder) this.objCoderModel.findById(idUpdate);
 
         if (objCoder == null) {
             JOptionPane.showMessageDialog(null, "Coder not found.");
         } else {
-            confirm = JOptionPane.showConfirmDialog(null, "Are your sure want to update the coder: \n" + objCoder.toString());
-            if (confirm == 0) {
-                objCoder.setAge(Integer.parseInt(JOptionPane.showInputDialog("Type new age: ")));
-                objCoder.setName(JOptionPane.showInputDialog("Type new name: "));
-                objCoder.setClan(JOptionPane.showInputDialog("Type new clan: "));
-                objCoderModel.update(objCoder);
-            }
+            objCoder.setAge(Integer.parseInt(JOptionPane.showInputDialog(null,"Type new age: ",objCoder.getAge())));
+            objCoder.setName(JOptionPane.showInputDialog(null,"Type new name: ",objCoder.getName()));
+            objCoder.setClan(JOptionPane.showInputDialog(null,"Type new clan: ",String.valueOf(objCoder.getClan())));
+            objCoderModel.update(objCoder);
         }
         /* Coder coder = new Coder();
         getAll();
@@ -97,6 +92,7 @@ public class CoderController {
 
         objCoderModel.update(obj);*/
     }
+
     public void getByN() {
         String search = JOptionPane.showInputDialog("Enter the name you want to search ");
         String listCoderString = "CODER LIST\n";
@@ -106,7 +102,7 @@ public class CoderController {
             }
             JOptionPane.showMessageDialog(null, "Result of search...\n" + listCoderString);
         } else {
-            JOptionPane.showMessageDialog(null,"No results found");
+            JOptionPane.showMessageDialog(null, "No results found");
         }
     }
 }
